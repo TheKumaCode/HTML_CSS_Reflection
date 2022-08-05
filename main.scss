@@ -1,4 +1,99 @@
+// colors 
+$color-btn-nav-primary: #333645;
+
+
+
 body {
-    background-color: red;
+    background-color: white;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0px;
+}
+
+[class^="-icon"] {
+    font-family: icomoon;
+}
+
+.row {
+    display: table;
+    width: 100%;
+    margin: 0;
+}
+
+.h-r1 {
+    display: table-cell;
+    padding: 0;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.logo {
+    vertical-align: middle;
+    display: table-cell;
+    img {
+        width: 100%;
+    }
+}
+
+.phone-logo {
+    font-size: 32px;
+    margin-left: 20px;
+    color: $color-btn-nav-primary;
+}
+
+.btn-nav {
+    height: 56px;
+    width: auto;
+    border-radius: 3px;
+    border: 0;
+    padding: 5px 15px;
+    line-height: 46px;
+    float: left;
+    background-color: $color-btn-nav-primary;
+    border-color: $color-btn-nav-primary;
     color: white;
+    margin-left: 20px;
+}
+
+@mixin btn-icon {
+    display: block;
+    height: 4px;
+    width: 33px;
+    background-color: white;
+    border-radius: 0;
+}
+
+.btn-nav-icon {
+    @include btn-icon;
+    position: relative;
+    &::before{
+        @include btn-icon;
+        top: -10px;
+        position: absolute;
+        content: '';
+    }
+    &::after {
+        @include btn-icon;
+        top: 10px;
+        position: absolute;
+        content: '';
+    }
+}
+
+.btn-nav-icon-inner {
+    background-color: white;
+    border-radius: 0;
+    &::before{
+        background-color: white;
+        border-radius: 0;
+        top: -10px;
+    }
+    &::after {
+        background-color: white;
+        border-radius: 0;
+        top: -10px;
+    }
 }

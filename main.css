@@ -1,4 +1,98 @@
 body {
-  background-color: red;
+  background-color: white;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 0px;
+}
+
+[class^=-icon] {
+  font-family: icomoon;
+}
+
+.row {
+  display: table;
+  width: 100%;
+  margin: 0;
+}
+
+.h-r1 {
+  display: table-cell;
+  padding: 0;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.logo {
+  vertical-align: middle;
+  display: table-cell;
+}
+.logo img {
+  width: 100%;
+}
+
+.phone-logo {
+  font-size: 32px;
+  margin-left: 20px;
+  color: #333645;
+}
+
+.btn-nav {
+  height: 56px;
+  width: auto;
+  border-radius: 3px;
+  border: 0;
+  padding: 5px 15px;
+  line-height: 46px;
+  float: left;
+  background-color: #333645;
+  border-color: #333645;
   color: white;
+  margin-left: 20px;
+}
+
+.btn-nav-icon {
+  display: block;
+  height: 4px;
+  width: 33px;
+  background-color: white;
+  border-radius: 0;
+  position: relative;
+}
+.btn-nav-icon::before {
+  display: block;
+  height: 4px;
+  width: 33px;
+  background-color: white;
+  border-radius: 0;
+  top: -10px;
+  position: absolute;
+  content: "";
+}
+.btn-nav-icon::after {
+  display: block;
+  height: 4px;
+  width: 33px;
+  background-color: white;
+  border-radius: 0;
+  top: 10px;
+  position: absolute;
+  content: "";
+}
+
+.btn-nav-icon-inner {
+  background-color: white;
+  border-radius: 0;
+}
+.btn-nav-icon-inner::before {
+  background-color: white;
+  border-radius: 0;
+  top: -10px;
+}
+.btn-nav-icon-inner::after {
+  background-color: white;
+  border-radius: 0;
+  top: -10px;
 }/*# sourceMappingURL=main.css.map */
