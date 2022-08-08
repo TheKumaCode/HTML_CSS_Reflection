@@ -54,6 +54,10 @@ button {
   display: table;
 }
 
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
 .row:before {
   content: " ";
   display: table;
@@ -61,6 +65,13 @@ button {
 .row:after {
   content: " ";
   display: table;
+}
+
+.h1, h1 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  margin: 0 0 28px;
+  color: #333645;
 }
 
 [class^=-icon] {
@@ -409,10 +420,6 @@ button {
 .services-list {
   margin-top: 20px;
 }
-.services-list .row {
-  margin-left: -15px;
-  margin-right: -15px;
-}
 .services-list .h2 {
   font-size: 1.3rem;
   position: relative;
@@ -467,8 +474,8 @@ button {
 
 .services-r1, .services-r2 {
   position: relative;
-  padding-left: 15px;
   padding-right: 15px;
+  padding-left: 15px;
 }
 .services-r1 a, .services-r2 a {
   font-weight: 600;
@@ -764,7 +771,17 @@ button {
 
 .welcome-background {
   background-color: #333645;
-  height: 400px;
+  color: white;
+}
+.welcome-background a {
+  color: white;
+}
+.welcome-background a:hover {
+  text-decoration: underline;
+}
+.welcome-background .h1 {
+  color: white;
+  font-weight: 600;
 }
 
 .clear-fix:before {
@@ -777,6 +794,16 @@ button {
 }
 .clear-fix::after {
   clear: both;
+}
+
+.col-1 {
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.col-1 .h1 {
+  margin-top: -6px;
+  margin-bottom: 40px;
 }
 
 @media (min-width: 767px) {
@@ -794,6 +821,10 @@ button {
   }
   .container {
     width: 752px;
+  }
+  .services-r2 {
+    width: 50%;
+    float: left;
   }
 }
 @media (min-width: 992px) {
