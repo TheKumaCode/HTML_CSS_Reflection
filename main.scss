@@ -1093,6 +1093,9 @@ h3 {
     }
     &:hover {
         filter: grayscale(0);
+        .description {
+            display: block !important;
+        }
     }
 }
 
@@ -1104,6 +1107,7 @@ h3 {
     color: white;
     font-size: .875rem;
     max-width: 260px;
+    display: none;
 }
 
 .newsletter {

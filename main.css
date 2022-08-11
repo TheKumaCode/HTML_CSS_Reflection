@@ -1040,6 +1040,9 @@ h3 a {
 .client:hover {
   filter: grayscale(0);
 }
+.client:hover .description {
+  display: block !important;
+}
 
 .description {
   position: absolute;
@@ -1049,6 +1052,7 @@ h3 a {
   color: white;
   font-size: 0.875rem;
   max-width: 260px;
+  display: none;
 }
 
 .newsletter {
