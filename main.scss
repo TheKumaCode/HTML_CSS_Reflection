@@ -104,6 +104,13 @@ h3 {
     }
 }
 
+h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0 0 15px;
+    color: $color-primary;
+}
+
 .h1, h1 {
     font-size: 2.25rem;
     font-weight: 400;
@@ -1061,6 +1068,9 @@ h3 {
 
 .clients-section {
     display: none;
+    .section {
+        overflow: visible !important;
+    }
 }
 
 .client-list {
@@ -1102,12 +1112,47 @@ h3 {
 .description {
     position: absolute;
     bottom: 100%;
+    left: -200px;
+    right: -200px;
+    display: none;
+}
+
+.box {
     background-color: $color-primary;
     padding: 20px;
     color: white;
     font-size: .875rem;
     max-width: 260px;
-    display: none;
+    margin: 0 auto 50px;
+    h3 {
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            background-color: white;
+            width: 28px;
+            height: 3px;
+            top: 90%;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+}
+
+.arrow {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -36px;
+    &::after {
+        content: "";
+        margin: auto;
+        display: inline-block;
+        border-color: $color-primary transparent transparent;
+        border-style: solid;
+        border-width: 35px 36px 0;
+    }
 }
 
 .newsletter {
@@ -1221,6 +1266,10 @@ input[type=checkbox] {
 .media-content {
     display: table-cell;
     vertical-align: top;
+    a {
+        color: $color-primary;
+        text-decoration: underline;
+    }
 }
 
 footer {
@@ -1232,6 +1281,7 @@ footer {
         font-size: 1rem;
         text-transform: uppercase;
         margin-bottom: 26px;
+        margin-top: 0;
     }
     ul {
         list-style: none;
