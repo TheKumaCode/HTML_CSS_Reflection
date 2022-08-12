@@ -1099,6 +1099,11 @@ label {
   border-radius: 2px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
 }
+.form-control:focus {
+  border-color: #5bc0de;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), 0 0 8px rgba(91, 192, 222, 0.6);
+}
 
 .media {
   cursor: pointer;
