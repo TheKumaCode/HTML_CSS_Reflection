@@ -112,7 +112,7 @@ h2 {
 }
 .phone-logo:hover {
   color: #22242e;
-  text-decoration: underline;
+  border-bottom: 4px solid #22242e;
 }
 
 .btn {
@@ -422,6 +422,7 @@ h2 {
   font-weight: 600;
   line-height: 1.75rem;
   margin-bottom: 0.375rem;
+  margin-top: 0;
 }
 
 .services-list {
@@ -483,6 +484,7 @@ h2 {
   position: relative;
   padding-right: 15px;
   padding-left: 15px;
+  top: -22px;
 }
 .services-r1 a, .services-r2 a {
   font-weight: 600;
@@ -699,6 +701,18 @@ h2 {
   overflow: hidden;
 }
 
+.partnerships {
+  width: 5000px;
+}
+
+.partnership {
+  margin-right: 50px;
+  filter: grayscale(1);
+}
+.partnership:hover {
+  filter: grayscale(0);
+}
+
 .welcome-background {
   background-color: #333645;
   color: white;
@@ -787,6 +801,11 @@ h2 {
   padding-top: 50px;
 }
 
+.latest-news .section {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 .news-title-container {
   display: flex;
   justify-content: space-between;
@@ -796,13 +815,14 @@ h2 {
   font-weight: 600;
 }
 .news-view-all-top a:hover {
-  text-decoration: underline;
+  border-bottom: 3px solid #22242e;
 }
 
 .col-2 {
   position: relative;
   padding-left: 15px;
   padding-right: 15px;
+  top: -35px;
 }
 
 .item {
@@ -931,7 +951,7 @@ h2 {
   font-weight: 600;
 }
 .news-view-all a:hover {
-  text-decoration: underline;
+  border-bottom: 3px solid #22242e;
 }
 
 .clients-section {
@@ -1026,11 +1046,15 @@ h2 {
 }
 
 .sign-up {
-  margin: 0;
-  padding: 50px 0;
+  margin: 0 0 8px;
+  padding: 42px 0;
 }
 .sign-up button {
   color: white;
+}
+.sign-up .btn-norm-dark {
+  padding: 5px 15px;
+  font-size: 1.063rem;
 }
 
 .user-input-container {
@@ -1076,14 +1100,9 @@ label {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
 }
 
-.marketing-checkbox {
-  line-height: 32px;
+.media {
   cursor: pointer;
 }
-.marketing-checkbox input[type=checkbox] {
-  display: none;
-}
-
 .media:first-child {
   margin-top: 0;
 }
@@ -1094,17 +1113,48 @@ label {
   vertical-align: top;
 }
 
-.checkbox {
+.checked {
+  position: absolute;
+  top: 2px;
+  left: 10px;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.checkmark {
+  color: white;
+}
+
+.checkbox-container {
   position: relative;
   float: left;
-  border: 3px solid #333645;
-  border-radius: 3px;
   height: 32px;
   width: 32px;
   margin-right: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+}
+
+input.checkbox {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+input.checkbox:after {
+  content: "";
+  border: 3px solid #333645;
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  border-radius: 3px;
+}
+input.checkbox:checked {
+  background-color: #333645;
+}
+input.checkbox:checked + .checked {
+  display: block !important;
 }
 
 .marketing-preference-checked {
@@ -1115,10 +1165,6 @@ label {
 .marketing-preference-checked .checkmark {
   font-size: 1.5rem;
   display: none;
-}
-
-input[type=checkbox]:checked .checkmark {
-  display: block;
 }
 
 .media-content {
@@ -1138,6 +1184,7 @@ footer {
 footer h4 {
   color: white;
   font-size: 1rem;
+  font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 26px;
   margin-top: 0;
@@ -1205,7 +1252,8 @@ footer a {
   text-align: center;
   padding: 7px 10px 10px;
   border-radius: 50%;
-  max-height: 38px;
+  height: 36px;
+  width: 36px;
 }
 
 a.facebook:hover {
@@ -1223,6 +1271,10 @@ a.linked-in:hover {
 
 .mobile-br {
   display: none;
+}
+
+.sitemap:hover {
+  text-decoration: underline;
 }
 
 @media (min-width: 767px) {
@@ -1292,6 +1344,7 @@ a.linked-in:hover {
   .services-title-container {
     width: 100%;
     float: left;
+    top: -8px;
   }
   .services-r1, .services-r2 {
     float: left;
@@ -1356,6 +1409,9 @@ a.linked-in:hover {
     width: 100%;
     justify-content: space-evenly;
   }
+  .sign-up .btn-norm-dark {
+    margin-bottom: 0;
+  }
 }
 @media (max-width: 992px) {
   .banner-img {
@@ -1375,5 +1431,8 @@ a.linked-in:hover {
   }
   .mobile-br {
     display: block !important;
+  }
+  .services-r1, .services-r2 {
+    top: -8px;
   }
 }/*# sourceMappingURL=main.css.map */
