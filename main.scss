@@ -20,6 +20,11 @@ $color-nav7-primary: #a3331d;
 $color-nav7-secondary: #ce4125;
 $shadow-text-box: inset 0 1px 1px rgb(0 0 0 / 8%);
 
+@mixin navBtnHover {
+    background-color: white;
+    border-color: white;
+}
+
 @mixin btn-icon {
     display: block;
     height: 4px;
@@ -532,7 +537,7 @@ h2 {
 }
 
 //Nav Buttons
-.software, .it, .digitat, .telecoms, .web, .security, .developer-course  {
+.software, .it, .digital, .telecoms, .web, .security, .developer-course  {
     &:hover {
         >.nav-dropdown {
             display: block !important;
@@ -542,10 +547,6 @@ h2 {
         }
         .services-icon {
             background-color: white;
-        }
-        .btn-software {
-            background-color: white;
-            border-color: white;
         }
     }
 }
@@ -564,6 +565,7 @@ h2 {
         }
         .btn-software {
             color: $color-nav1-secondary;
+            @include navBtnHover;
         }
     }
     .services-icon {
@@ -585,6 +587,7 @@ h2 {
         }
         .btn-it {
             color: $color-nav2-secondary;
+            @include navBtnHover;
         }
     }
     .services-icon {
@@ -606,6 +609,7 @@ h2 {
         }
         .btn-digital {
             color: $color-nav3-secondary;
+            @include navBtnHover;
         }
     }
     .services-icon {
@@ -627,6 +631,7 @@ h2 {
         }
         .btn-telecoms {
             color: $color-nav4-secondary;
+            @include navBtnHover;
         }
     }
     .services-icon {
@@ -648,6 +653,7 @@ h2 {
         }
         .btn-web {
             color: $color-nav5-secondary;
+            @include navBtnHover;
         }
     }
     .services-icon {
@@ -669,6 +675,7 @@ h2 {
         }
         .btn-security {
             color: $color-nav6-secondary;
+            @include navBtnHover;
         }
     }
     .services-icon {
@@ -690,6 +697,7 @@ h2 {
         }
         .btn-developer-course {
             color: $color-nav7-secondary;
+            @include navBtnHover;
         }
     }
     .services-icon {

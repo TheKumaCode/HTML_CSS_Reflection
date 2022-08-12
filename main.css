@@ -497,18 +497,14 @@ h2 {
   background-color: white;
 }
 
-.software:hover > .nav-dropdown, .it:hover > .nav-dropdown, .digitat:hover > .nav-dropdown, .telecoms:hover > .nav-dropdown, .web:hover > .nav-dropdown, .security:hover > .nav-dropdown, .developer-course:hover > .nav-dropdown {
+.software:hover > .nav-dropdown, .it:hover > .nav-dropdown, .digital:hover > .nav-dropdown, .telecoms:hover > .nav-dropdown, .web:hover > .nav-dropdown, .security:hover > .nav-dropdown, .developer-course:hover > .nav-dropdown {
   display: block !important;
 }
-.software:hover .p, .software:hover .h2, .it:hover .p, .it:hover .h2, .digitat:hover .p, .digitat:hover .h2, .telecoms:hover .p, .telecoms:hover .h2, .web:hover .p, .web:hover .h2, .security:hover .p, .security:hover .h2, .developer-course:hover .p, .developer-course:hover .h2 {
+.software:hover .p, .software:hover .h2, .it:hover .p, .it:hover .h2, .digital:hover .p, .digital:hover .h2, .telecoms:hover .p, .telecoms:hover .h2, .web:hover .p, .web:hover .h2, .security:hover .p, .security:hover .h2, .developer-course:hover .p, .developer-course:hover .h2 {
   color: white;
 }
-.software:hover .services-icon, .it:hover .services-icon, .digitat:hover .services-icon, .telecoms:hover .services-icon, .web:hover .services-icon, .security:hover .services-icon, .developer-course:hover .services-icon {
+.software:hover .services-icon, .it:hover .services-icon, .digital:hover .services-icon, .telecoms:hover .services-icon, .web:hover .services-icon, .security:hover .services-icon, .developer-course:hover .services-icon {
   background-color: white;
-}
-.software:hover .btn-software, .it:hover .btn-software, .digitat:hover .btn-software, .telecoms:hover .btn-software, .web:hover .btn-software, .security:hover .btn-software, .developer-course:hover .btn-software {
-  background-color: white;
-  border-color: white;
 }
 
 .software i {
@@ -525,6 +521,8 @@ h2 {
 }
 .software:hover .btn-software {
   color: #67809f;
+  background-color: white;
+  border-color: white;
 }
 .software .services-icon {
   background-color: #67809f;
@@ -544,6 +542,8 @@ h2 {
 }
 .it:hover .btn-it {
   color: #4183d7;
+  background-color: white;
+  border-color: white;
 }
 .it .services-icon {
   background-color: #4183d7;
@@ -563,6 +563,8 @@ h2 {
 }
 .digital:hover .btn-digital {
   color: #2ecc71;
+  background-color: white;
+  border-color: white;
 }
 .digital .services-icon {
   background-color: #2ecc71;
@@ -582,6 +584,8 @@ h2 {
 }
 .telecoms:hover .btn-telecoms {
   color: #d64541;
+  background-color: white;
+  border-color: white;
 }
 .telecoms .services-icon {
   background-color: #d64541;
@@ -601,6 +605,8 @@ h2 {
 }
 .web:hover .btn-web {
   color: #926fb1;
+  background-color: white;
+  border-color: white;
 }
 .web .services-icon {
   background-color: #926fb1;
@@ -620,6 +626,8 @@ h2 {
 }
 .security:hover .btn-security {
   color: #f62459;
+  background-color: white;
+  border-color: white;
 }
 .security .services-icon {
   background-color: #f62459;
@@ -639,6 +647,8 @@ h2 {
 }
 .developer-course:hover .btn-developer-course {
   color: #ce4125;
+  background-color: white;
+  border-color: white;
 }
 .developer-course .services-icon {
   background-color: #ce4125;
