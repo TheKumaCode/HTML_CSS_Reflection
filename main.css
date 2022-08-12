@@ -253,7 +253,7 @@ h2 {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
 }
 
-#submit-search {
+.submit-search {
   background: none;
   border: none;
   outline: none;
@@ -284,7 +284,7 @@ h2 {
   border: 1px solid #e5e5e5;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
 }
-.tablet #submit-search {
+.tablet .submit-search {
   padding: 7px 20px 3px;
   height: 56px;
   font-size: 1.5rem;
@@ -296,7 +296,7 @@ h2 {
   right: 0;
   position: relative;
 }
-.tablet #submit-search:hover {
+.tablet .submit-search:hover {
   background-color: #84858f;
 }
 .tablet .form-search {
@@ -497,6 +497,20 @@ h2 {
   background-color: white;
 }
 
+.software:hover > .nav-dropdown, .it:hover > .nav-dropdown, .digitat:hover > .nav-dropdown, .telecoms:hover > .nav-dropdown, .web:hover > .nav-dropdown, .security:hover > .nav-dropdown, .developer-course:hover > .nav-dropdown {
+  display: block !important;
+}
+.software:hover .p, .software:hover .h2, .it:hover .p, .it:hover .h2, .digitat:hover .p, .digitat:hover .h2, .telecoms:hover .p, .telecoms:hover .h2, .web:hover .p, .web:hover .h2, .security:hover .p, .security:hover .h2, .developer-course:hover .p, .developer-course:hover .h2 {
+  color: white;
+}
+.software:hover .services-icon, .it:hover .services-icon, .digitat:hover .services-icon, .telecoms:hover .services-icon, .web:hover .services-icon, .security:hover .services-icon, .developer-course:hover .services-icon {
+  background-color: white;
+}
+.software:hover .btn-software, .it:hover .btn-software, .digitat:hover .btn-software, .telecoms:hover .btn-software, .web:hover .btn-software, .security:hover .btn-software, .developer-course:hover .btn-software {
+  background-color: white;
+  border-color: white;
+}
+
 .software i {
   color: #526781;
 }
@@ -506,25 +520,11 @@ h2 {
 .software:hover {
   background-color: #67809f;
 }
-.software:hover > .nav-dropdown {
-  display: block !important;
-}
-.software:hover .p {
-  color: white;
-}
-.software:hover .h2 {
-  color: white;
-}
-.software:hover .services-icon {
-  background-color: white;
-}
 .software:hover .icon {
   color: #67809f;
 }
 .software:hover .btn-software {
   color: #67809f;
-  background-color: white;
-  border-color: white;
 }
 .software .services-icon {
   background-color: #67809f;
@@ -539,25 +539,11 @@ h2 {
 .it:hover {
   background-color: #4183d7;
 }
-.it:hover > .nav-dropdown {
-  display: block !important;
-}
-.it:hover .p {
-  color: white;
-}
-.it:hover .h2 {
-  color: white;
-}
-.it:hover .services-icon {
-  background-color: white;
-}
 .it:hover .icon {
   color: #4183d7;
 }
 .it:hover .btn-it {
   color: #4183d7;
-  background-color: white;
-  border-color: white;
 }
 .it .services-icon {
   background-color: #4183d7;
@@ -572,25 +558,11 @@ h2 {
 .digital:hover {
   background-color: #2ecc71;
 }
-.digital:hover > .nav-dropdown {
-  display: block !important;
-}
-.digital:hover .p {
-  color: white;
-}
-.digital:hover .h2 {
-  color: white;
-}
-.digital:hover .services-icon {
-  background-color: white;
-}
 .digital:hover .icon {
   color: #2ecc71;
 }
 .digital:hover .btn-digital {
   color: #2ecc71;
-  background-color: white;
-  border-color: white;
 }
 .digital .services-icon {
   background-color: #2ecc71;
@@ -605,25 +577,11 @@ h2 {
 .telecoms:hover {
   background-color: #d64541;
 }
-.telecoms:hover > .nav-dropdown {
-  display: block !important;
-}
-.telecoms:hover .p {
-  color: white;
-}
-.telecoms:hover .h2 {
-  color: white;
-}
-.telecoms:hover .services-icon {
-  background-color: white;
-}
 .telecoms:hover .icon {
   color: #d64541;
 }
 .telecoms:hover .btn-telecoms {
   color: #d64541;
-  background-color: white;
-  border-color: white;
 }
 .telecoms .services-icon {
   background-color: #d64541;
@@ -638,25 +596,11 @@ h2 {
 .web:hover {
   background-color: #926fb1;
 }
-.web:hover > .nav-dropdown {
-  display: block !important;
-}
-.web:hover .p {
-  color: white;
-}
-.web:hover .h2 {
-  color: white;
-}
-.web:hover .services-icon {
-  background-color: white;
-}
 .web:hover .icon {
   color: #926fb1;
 }
 .web:hover .btn-web {
   color: #926fb1;
-  background-color: white;
-  border-color: white;
 }
 .web .services-icon {
   background-color: #926fb1;
@@ -671,25 +615,11 @@ h2 {
 .security:hover {
   background-color: #f62459;
 }
-.security:hover > .nav-dropdown {
-  display: block !important;
-}
-.security:hover .p {
-  color: white;
-}
-.security:hover .h2 {
-  color: white;
-}
-.security:hover .services-icon {
-  background-color: white;
-}
 .security:hover .icon {
   color: #f62459;
 }
 .security:hover .btn-security {
   color: #f62459;
-  background-color: white;
-  border-color: white;
 }
 .security .services-icon {
   background-color: #f62459;
@@ -704,68 +634,51 @@ h2 {
 .developer-course:hover {
   background-color: #ce4125;
 }
-.developer-course:hover > .nav-dropdown {
-  display: block !important;
-}
-.developer-course:hover .p {
-  color: white;
-}
-.developer-course:hover .h2 {
-  color: white;
-}
-.developer-course:hover .services-icon {
-  background-color: white;
-}
 .developer-course:hover .icon {
   color: #ce4125;
 }
 .developer-course:hover .btn-developer-course {
   color: #ce4125;
-  background-color: white;
-  border-color: white;
 }
 .developer-course .services-icon {
   background-color: #ce4125;
 }
 
-.btn-software {
+[class^=btn-] {
   color: white;
+}
+
+.btn-software {
   background-color: #67809f;
   border-color: #67809f;
 }
 
 .btn-it {
-  color: white;
   background-color: #4183d7;
   border-color: #4183d7;
 }
 
 .btn-digital {
-  color: white;
   background-color: #2ecc71;
   border-color: #2ecc71;
 }
 
 .btn-telecoms {
-  color: white;
   background-color: #d64541;
   border-color: #d64541;
 }
 
 .btn-web {
-  color: white;
   background-color: #926fb1;
   border-color: #926fb1;
 }
 
 .btn-security {
-  color: white;
   background-color: #f62459;
   border-color: #f62459;
 }
 
 .btn-developer-course {
-  color: white;
   background-color: #ce4125;
   border-color: #ce4125;
 }
@@ -1385,7 +1298,7 @@ a.linked-in:hover {
   }
 }
 @media (min-width: 992px) and (max-width: 1260px) {
-  #submit-search {
+  .submit-search {
     border-radius: 3px !important;
   }
 }
@@ -1398,7 +1311,7 @@ a.linked-in:hover {
   .container {
     width: 1200px;
   }
-  #input-search {
+  .input-search {
     display: inline-block;
     margin-left: 0;
     width: 240px;

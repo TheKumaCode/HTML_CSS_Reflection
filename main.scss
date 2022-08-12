@@ -18,6 +18,7 @@ $color-nav6-primary: #de093f;
 $color-nav6-secondary: #f62459;
 $color-nav7-primary: #a3331d;
 $color-nav7-secondary: #ce4125;
+$shadow-text-box: inset 0 1px 1px rgb(0 0 0 / 8%);
 
 @mixin btn-icon {
     display: block;
@@ -33,7 +34,7 @@ $color-nav7-secondary: #ce4125;
     padding-left: 15px;
 }
 
-@mixin reviewBtn {
+@mixin btnSize {
     border-radius: 6px;
     padding: 10px 30px;
     font-size: 20px;
@@ -284,10 +285,10 @@ h2 {
     border-radius: 2px;
     outline: hsla(0, 0%, 100%, .2);
     background-color:rgba(0, 0, 0, .1);
-    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    box-shadow: $shadow-text-box;
 }
 
-#submit-search {
+.submit-search {
     background: none;
     border: none;
     outline: none;
@@ -315,9 +316,9 @@ h2 {
         background-color: white;
         background-image: none;
         border: 1px solid #e5e5e5;
-        box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+        box-shadow: $shadow-text-box;
     } 
-    #submit-search {
+    .submit-search {
         padding: 7px 20px 3px;
         height: 56px;
         font-size: 1.5rem;
@@ -531,6 +532,24 @@ h2 {
 }
 
 //Nav Buttons
+.software, .it, .digitat, .telecoms, .web, .security, .developer-course  {
+    &:hover {
+        >.nav-dropdown {
+            display: block !important;
+        }
+        .p, .h2 {
+            color: white;
+        }
+        .services-icon {
+            background-color: white;
+        }
+        .btn-software {
+            background-color: white;
+            border-color: white;
+        }
+    }
+}
+
 .software {
     i {
         color: $color-nav1-primary;
@@ -540,25 +559,11 @@ h2 {
     }
     &:hover {
         background-color: $color-nav1-secondary;
-        >.nav-dropdown {
-            display: block !important;
-        }
-        .p {
-            color: white;
-        }
-        .h2 {
-            color: white;
-        }
-        .services-icon {
-            background-color: white;
-        }
         .icon {
             color: $color-nav1-secondary;
         }
         .btn-software {
             color: $color-nav1-secondary;
-            background-color: white;
-            border-color: white;
         }
     }
     .services-icon {
@@ -575,25 +580,11 @@ h2 {
     }
     &:hover {
         background-color: $color-nav2-secondary;
-        >.nav-dropdown {
-            display: block !important;
-        }
-        .p {
-            color: white;
-        }
-        .h2 {
-            color: white;
-        }
-        .services-icon {
-            background-color: white;
-        }
         .icon {
             color: $color-nav2-secondary;
         }
         .btn-it {
             color: $color-nav2-secondary;
-            background-color: white;
-            border-color: white;
         }
     }
     .services-icon {
@@ -610,25 +601,11 @@ h2 {
     }
     &:hover {
         background-color: $color-nav3-secondary;
-        >.nav-dropdown {
-            display: block !important;
-        }
-        .p {
-            color: white;
-        }
-        .h2 {
-            color: white;
-        }
-        .services-icon {
-            background-color: white;
-        }
         .icon {
             color: $color-nav3-secondary;
         }
         .btn-digital {
             color: $color-nav3-secondary;
-            background-color: white;
-            border-color: white;
         }
     }
     .services-icon {
@@ -645,25 +622,11 @@ h2 {
     }
     &:hover {
         background-color: $color-nav4-secondary;
-        >.nav-dropdown {
-            display: block !important;
-        }
-        .p {
-            color: white;
-        }
-        .h2 {
-            color: white;
-        }
-        .services-icon {
-            background-color: white;
-        }
         .icon {
             color: $color-nav4-secondary;
         }
         .btn-telecoms {
             color: $color-nav4-secondary;
-            background-color: white;
-            border-color: white;
         }
     }
     .services-icon {
@@ -680,25 +643,11 @@ h2 {
     }
     &:hover {
         background-color: $color-nav5-secondary;
-        >.nav-dropdown {
-            display: block !important;
-        }
-        .p {
-            color: white;
-        }
-        .h2 {
-            color: white;
-        }
-        .services-icon {
-            background-color: white;
-        }
         .icon {
             color: $color-nav5-secondary;
         }
         .btn-web {
             color: $color-nav5-secondary;
-            background-color: white;
-            border-color: white;
         }
     }
     .services-icon {
@@ -715,25 +664,11 @@ h2 {
     }
     &:hover {
         background-color: $color-nav6-secondary;
-        >.nav-dropdown {
-            display: block !important;
-        }
-        .p {
-            color: white;
-        }
-        .h2 {
-            color: white;
-        }
-        .services-icon {
-            background-color: white;
-        }
         .icon {
             color: $color-nav6-secondary;
         }
         .btn-security {
             color: $color-nav6-secondary;
-            background-color: white;
-            border-color: white;
         }
     }
     .services-icon {
@@ -750,25 +685,11 @@ h2 {
     }
     &:hover {
         background-color: $color-nav7-secondary;
-        >.nav-dropdown {
-            display: block !important;
-        }
-        .p {
-            color: white;
-        }
-        .h2 {
-            color: white;
-        }
-        .services-icon {
-            background-color: white;
-        }
         .icon {
             color: $color-nav7-secondary;
         }
         .btn-developer-course {
             color: $color-nav7-secondary;
-            background-color: white;
-            border-color: white;
         }
     }
     .services-icon {
@@ -776,44 +697,41 @@ h2 {
     }
 }
 
-.btn-software {
+[class^="btn-"] {
     color: white;
+}
+
+.btn-software {
     background-color: $color-nav1-secondary;
     border-color: $color-nav1-secondary;
 }
 
 .btn-it {
-    color: white;
     background-color: $color-nav2-secondary;
     border-color: $color-nav2-secondary;
 }
 
 .btn-digital {
-    color: white;
     background-color: $color-nav3-secondary;
     border-color: $color-nav3-secondary;
 }
 
 .btn-telecoms {
-    color: white;
     background-color: $color-nav4-secondary;
     border-color: $color-nav4-secondary;
 }
 
 .btn-web {
-    color: white;
     background-color: $color-nav5-secondary;
     border-color: $color-nav5-secondary;
 }
 
 .btn-security {
-    color: white;
     background-color: $color-nav6-secondary;
     border-color: $color-nav6-secondary;
 }
 
 .btn-developer-course {
-    color: white;
     background-color: $color-nav7-secondary;
     border-color: $color-nav7-secondary;
 }
@@ -888,7 +806,7 @@ h2 {
 .btn-google {
     background-color: #4387f6;
     margin-right: 8px;
-    @include reviewBtn;
+    @include btnSize;
     &:hover {
         background-color: #166af4;
     }
@@ -896,7 +814,7 @@ h2 {
 
 .btn-trustpilot {
     background-color: #00b67b;
-    @include reviewBtn;
+    @include btnSize;
     &:hover {
         background-color: #009b69;
     }
@@ -1209,7 +1127,7 @@ label {
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 2px;
-    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    box-shadow: $shadow-text-box;
 }
 
 .marketing-checkbox {
@@ -1472,7 +1390,7 @@ a {
 }
 
 @media (min-width: 992px) and (max-width: 1260px) {
-    #submit-search {
+    .submit-search {
         border-radius: 3px !important;
     }
 }
@@ -1489,7 +1407,7 @@ a {
     .container {
         width: 1200px;
     }
-    #input-search {
+    .input-search {
         display: inline-block;
         margin-left: 0;
         width: 240px;
