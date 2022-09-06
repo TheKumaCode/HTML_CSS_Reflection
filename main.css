@@ -701,8 +701,13 @@ h2 {
   overflow: hidden;
 }
 
+.part-sect {
+  width: 2000px;
+}
+
 .partnerships {
-  width: 5000px;
+  min-width: 100%;
+  overflow: hidden;
 }
 
 .partnership {
@@ -899,7 +904,7 @@ h2 {
 
 .news-img-container {
   display: block;
-  border-radius: 3px 3px 0 0;
+  border-radius: 0;
   position: relative;
   overflow: hidden;
   bottom: -10px;
@@ -1046,7 +1051,6 @@ h2 {
 }
 
 .sign-up {
-  margin: 0 0 8px;
   padding: 42px 0;
 }
 .sign-up button {
