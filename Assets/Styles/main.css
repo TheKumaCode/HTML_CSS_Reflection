@@ -37,22 +37,6 @@ p {
   margin-bottom: 25px;
 }
 
-.inner {
-  padding: 20px 0px;
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.row {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-
 h3 {
   font-weight: 400;
   margin: 0 0 15px;
@@ -69,6 +53,22 @@ h2 {
   color: #333645;
 }
 
+.inner {
+  padding: 20px 0px;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
 .h1, h1 {
   font-size: 2.25rem;
   font-weight: 400;
@@ -79,6 +79,33 @@ h2 {
 
 [class^=-icon] {
   font-family: icomoon;
+}
+
+.btn-support {
+  color: white;
+  background-color: #4183d7;
+  border-color: #4183d7;
+  margin-left: 0;
+}
+.btn-support:hover {
+  background-color: #2a6ec6;
+  border-color: #2a6ec6;
+}
+
+.btn-norm {
+  color: white;
+  background-color: #999aa2;
+  border-color: #999aa2;
+}
+.btn-norm:hover {
+  background-color: #84858f;
+  border-color: #84858f;
+}
+
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow: hidden;
 }
 
 #header .row {
@@ -146,92 +173,10 @@ h2 {
   line-height: 46px;
 }
 
-.btn-support {
-  color: white;
-  background-color: #4183d7;
-  border-color: #4183d7;
-  margin-left: 0;
-}
-.btn-support:hover {
-  background-color: #2a6ec6;
-  border-color: #2a6ec6;
-}
-
-.btn-norm {
-  color: white;
-  background-color: #999aa2;
-  border-color: #999aa2;
-}
-.btn-norm:hover {
-  background-color: #84858f;
-  border-color: #84858f;
-}
-
 .fa-computer-mouse, .fa-paper-plane {
   margin-right: 5px;
   font-size: 1.2rem;
   line-height: 45px;
-}
-
-.btn-nav {
-  height: 56px;
-  width: auto;
-  border-radius: 3px;
-  border: 0;
-  padding: 5px 15px;
-  line-height: 46px;
-  float: left;
-  background-color: #333645;
-  border-color: #333645;
-  color: white;
-  margin-left: 20px;
-}
-.btn-nav:hover {
-  background-color: #22242e;
-}
-
-.btn-nav-icon {
-  display: block;
-  height: 4px;
-  width: 33px;
-  background-color: white;
-  border-radius: 0;
-  position: relative;
-}
-.btn-nav-icon::before {
-  display: block;
-  height: 4px;
-  width: 33px;
-  background-color: white;
-  border-radius: 0;
-  top: -10px;
-  position: absolute;
-  content: "";
-}
-.btn-nav-icon::after {
-  display: block;
-  height: 4px;
-  width: 33px;
-  background-color: white;
-  border-radius: 0;
-  top: 10px;
-  position: absolute;
-  content: "";
-}
-
-.btn-nav-icon-inner {
-  background-color: white;
-  border-radius: 0;
-}
-.btn-nav-icon-inner::before {
-  background-color: white;
-  border-radius: 0;
-  top: -10px;
-}
-.btn-nav-icon-inner::after {
-  background-color: white;
-  border-radius: 0;
-  top: -10px;
 }
 
 .form-search {
@@ -310,6 +255,67 @@ h2 {
 }
 .tablet .form-search {
   margin-top: 0;
+}
+
+.btn-nav {
+  height: 56px;
+  width: auto;
+  border-radius: 3px;
+  border: 0;
+  padding: 5px 15px;
+  line-height: 46px;
+  float: left;
+  background-color: #333645;
+  border-color: #333645;
+  color: white;
+  margin-left: 20px;
+}
+.btn-nav:hover {
+  background-color: #22242e;
+}
+
+.btn-nav-icon {
+  display: block;
+  height: 4px;
+  width: 33px;
+  background-color: white;
+  border-radius: 0;
+  position: relative;
+}
+.btn-nav-icon::before {
+  display: block;
+  height: 4px;
+  width: 33px;
+  background-color: white;
+  border-radius: 0;
+  top: -10px;
+  position: absolute;
+  content: "";
+}
+.btn-nav-icon::after {
+  display: block;
+  height: 4px;
+  width: 33px;
+  background-color: white;
+  border-radius: 0;
+  top: 10px;
+  position: absolute;
+  content: "";
+}
+
+.btn-nav-icon-inner {
+  background-color: white;
+  border-radius: 0;
+}
+.btn-nav-icon-inner::before {
+  background-color: white;
+  border-radius: 0;
+  top: -10px;
+}
+.btn-nav-icon-inner::after {
+  background-color: white;
+  border-radius: 0;
+  top: -10px;
 }
 
 .main-nav {
@@ -703,12 +709,6 @@ h2 {
 .btn-developer-course {
   background-color: #ce4125;
   border-color: #ce4125;
-}
-
-.section {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  overflow: hidden;
 }
 
 .part-sect {

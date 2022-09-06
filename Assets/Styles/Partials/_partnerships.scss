@@ -1,0 +1,16 @@
+.part-sect {
+    width: 2000px;
+}
+
+.partnerships {
+    min-width: 100%;
+    overflow: hidden;
+}
+
+.partnership {
+    margin-right: 50px;
+    filter: grayscale(1);
+    &:hover {
+        filter: grayscale(0);
+    }
+}

@@ -1,0 +1,24 @@
+@mixin navBtnHover {
+    background-color: white;
+    border-color: white;
+}
+
+@mixin btn-icon {
+    display: block;
+    height: 4px;
+    width: 33px;
+    background-color: white;
+    border-radius: 0;
+}
+
+@mixin colPad {
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@mixin btnSize {
+    border-radius: 6px;
+    padding: 10px 30px;
+    font-size: 20px;
+}

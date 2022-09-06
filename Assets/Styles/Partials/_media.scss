@@ -1,0 +1,186 @@
+
+
+// Tablet Changes
+@media (min-width: 767px) {
+    .mobile {
+        display: none;
+    }
+    .tablet {
+        display: block;
+    }
+    .h-r1 {
+        width: 50%;
+    }
+    .logo {
+        margin-left: auto;
+    }
+    .container {
+        width: 752px;
+    }
+    .services-r2 {
+        width: calc(100%/2);
+        float: left;
+    }
+    .col-2 {
+        width: 50%;
+        float: left;
+        &:last-child {
+            h3 {
+                min-height: 3rem;
+            }
+        }
+    }
+    .clients-section {
+        display: block;
+    }
+}
+
+//Computer Screen Changes
+@media (min-width: 992px) {
+    .btn-header {
+        display: inline-block;
+    }
+    #input-search {
+        display: none;
+        &:focus {
+            border-color: #5bc0de;
+            outline: 0;
+            box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(91 192 222 / 60%);
+        }
+    }
+    .container {
+        width: 970px;
+    }
+    .main-nav {
+        display: block;
+    }
+    .banner-img-container {
+        &::before {
+            content: '';
+            background: linear-gradient(270deg, transparent 25%, black);
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+            z-index: 2;
+        }
+    }
+    .banner-title {
+        font-size: 4rem;
+        line-height: 5rem;
+        text-align: left;
+    }
+    .banner-par {
+        font-size: 1.625rem;
+        line-height: 2.5rem;
+        text-align: left;
+    }
+    .services-title-container {
+        width: 100%;
+        float: left;
+        top: -8px;
+    }
+
+    .services-r1, .services-r2 {
+        float: left;
+    }
+    .services-r1 {
+        width: calc(100%/3);
+    }
+    .services-r2 {
+        width: calc(100%/2);
+    }
+    .col {
+        width: 50%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1260px) {
+    .submit-search {
+        border-radius: 3px !important;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 1260px) {
+    .col-2 {
+        &:last-child {
+            display: none !important;
+        }
+    }
+}
+
+@media (min-width: 1260px) {
+    .container {
+        width: 1200px;
+    }
+    #input-search {
+        display: inline-block;
+        margin-left: 0;
+        width: 240px;
+    }
+    .h-r1 {
+        width: auto;
+    }
+    .col-3 {
+        width: calc((100%/3) * 2);
+    }
+    .services-r2 {
+        width: calc(100%/4);
+    }
+    .btn-google, .btn-trustpilot {
+        padding: 10px 29px;
+    }
+    .col-2 {
+        width: calc(100%/3);
+    }
+}
+
+@media (max-width: 1260px) {
+    .nav-dropdown {
+        a {
+            font-size: 0.8125rem !important;
+        }
+    }
+    .btn-norm-dark {
+        margin-bottom: 50px;
+    }
+    .btn-google, .btn-trustpilot {
+        margin-top: 20px;
+    }
+    .services, .offices {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .sign-up {
+        .btn-norm-dark {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .banner-img {
+        opacity: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .news-view-all-top {
+        display: none !important;
+    }
+    .news-view-all {
+        display: block !important;
+    }
+    .services, .offices {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .mobile-br {
+        display: block !important;
+    }
+    .services-r1, .services-r2 {
+        top: -8px;
+    }
+}

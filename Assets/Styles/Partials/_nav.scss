@@ -1,0 +1,117 @@
+
+.btn-nav {
+    height: 56px;
+    width: auto;
+    border-radius: 3px;
+    border: 0;
+    padding: 5px 15px;
+    line-height: 46px;
+    float: left;
+    background-color: $color-primary;
+    border-color: $color-primary;
+    color: white;
+    margin-left: 20px;
+    &:hover {
+        background-color: $color-primary-hover;
+    }
+}
+
+.btn-nav-icon {
+    @include btn-icon;
+    position: relative;
+    &::before{
+        @include btn-icon;
+        top: -10px;
+        position: absolute;
+        content: '';
+    }
+    &::after {
+        @include btn-icon;
+        top: 10px;
+        position: absolute;
+        content: '';
+    }
+}
+
+.btn-nav-icon-inner {
+    background-color: white;
+    border-radius: 0;
+    &::before{
+        background-color: white;
+        border-radius: 0;
+        top: -10px;
+    }
+    &::after {
+        background-color: white;
+        border-radius: 0;
+        top: -10px;
+    }
+}
+
+.main-nav {
+    background-color: $color-primary;
+    display: none;
+    ul {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        li {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            &:hover {
+                i {
+                    color: white !important;
+                }
+            }
+        }
+        a {
+            position: relative;
+            display: block;
+            color: white;
+            text-transform: uppercase;
+            padding: 19px 0 18px;
+            font-size: 1.125rem;
+            text-decoration: none;
+            line-height: 1;
+        }
+        i[class^="fa-"] {
+            display: block;
+            padding-bottom: 10px;
+            font-size: 1.438rem;
+        }
+        small {
+            display: block;
+            font-size: .625rem;
+        }
+        .nav-dropdown {
+            flex-direction: column;
+        }
+    }
+}
+
+.nav-dropdown {
+    padding: 0.313rem 0;
+    margin: 0;
+    position: absolute !important;
+    top: 100%;
+    width: 100%;
+    z-index: 5;
+    list-style: none;
+    border-radius: 0 0 0.625rem 0.625rem;
+    display: none !important;
+    a {
+        padding: 0.625rem 0.938rem !important;
+        font-size: 1rem !important;
+        text-align: center !important;
+        display: block !important;
+        line-height: 1.313rem !important;
+        text-transform: none !important;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

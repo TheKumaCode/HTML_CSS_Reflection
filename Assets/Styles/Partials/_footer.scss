@@ -1,0 +1,115 @@
+
+footer {
+    background-color: $color-primary;
+    color: white;
+    padding: 47px 0 43px;
+    h4 {
+        color: white;
+        font-size: 1rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 26px;
+        margin-top: 0;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        font-size: .8125rem;
+        line-height: 1.375rem;
+    }
+    a {
+        color: white;
+    }
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.service, .office {
+    width: 225px;
+    margin-bottom: 30px;
+}
+
+.services, .offices {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: .8125rem;
+    border-top: 1px solid #888;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.license {
+    display: flex;
+    color: white;
+    padding-top: 5px;
+    span {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+.social-media {
+    display: flex;
+    justify-content: flex-end;
+    font-size: .9rem;
+    margin-top: -5px;
+    a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 7px 10px 10px;
+        border-radius: 50%;
+        height: 36px;
+        width: 36px;
+    }
+}
+
+a {
+    &.facebook {
+        &:hover {
+            background-color: #3b5998;
+        }
+    }
+    &.twitter {
+        &:hover {
+            background-color: #00aced;
+        }
+    }
+    &.instagram {
+        &:hover {
+            background-color: #d93175;
+        }
+    }
+    &.linked-in {
+        &:hover {
+            background-color: #0077b5;
+        }
+    }
+}
+
+.mobile-br {
+    display: none;
+}
+
+.sitemap {
+    &:hover {
+        text-decoration: underline;
+    }
+}
