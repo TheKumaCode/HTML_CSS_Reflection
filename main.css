@@ -284,6 +284,15 @@ h2 {
   border: 1px solid #e5e5e5;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
 }
+.tablet .input-search::-moz-placeholder {
+  color: #97908f;
+}
+.tablet .input-search:-ms-input-placeholder {
+  color: #97908f;
+}
+.tablet .input-search::placeholder {
+  color: #97908f;
+}
 .tablet .submit-search {
   padding: 7px 20px 3px;
   height: 56px;
@@ -306,9 +315,6 @@ h2 {
 .main-nav {
   background-color: #333645;
   display: none;
-}
-.main-nav .container {
-  padding: 0;
 }
 .main-nav ul {
   position: relative;
@@ -1055,7 +1061,7 @@ h2 {
 }
 
 .sign-up {
-  padding: 42px 0;
+  padding: 50px 0;
 }
 .sign-up button {
   color: white;
@@ -1063,6 +1069,7 @@ h2 {
 .sign-up .btn-norm-dark {
   padding: 5px 15px;
   font-size: 1.063rem;
+  border-radius: 3px;
 }
 
 .user-input-container {
@@ -1327,6 +1334,11 @@ a.linked-in:hover {
   }
   #input-search {
     display: none;
+  }
+  #input-search:focus {
+    border-color: #5bc0de;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), 0 0 8px rgba(91, 192, 222, 0.6);
   }
   .container {
     width: 970px;
