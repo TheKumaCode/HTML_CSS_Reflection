@@ -499,6 +499,10 @@ h2 {
   background-color: white;
 }
 
+.services-container {
+  overflow: visible !important;
+}
+
 .software:hover > .nav-dropdown, .it:hover > .nav-dropdown, .digital:hover > .nav-dropdown, .telecoms:hover > .nav-dropdown, .web:hover > .nav-dropdown, .security:hover > .nav-dropdown, .developer-course:hover > .nav-dropdown {
   display: block !important;
 }

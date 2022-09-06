@@ -538,6 +538,10 @@ h2 {
     background-color: white;
 }
 
+.services-container {
+    overflow: visible !important;
+}
+
 //Nav Buttons
 .software, .it, .digital, .telecoms, .web, .security, .developer-course  {
     &:hover {
