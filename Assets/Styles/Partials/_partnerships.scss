@@ -14,3 +14,17 @@
         filter: grayscale(0);
     }
 }
+
+.item {
+    max-height: 70px;
+    position: relative;
+    vertical-align: middle;
+    margin-top: 0 !important;
+    margin-right: 40px;
+    img {
+        width: auto !important;
+    }
+    &:hover {
+        top: 0 !important;
+    }
+}

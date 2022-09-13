@@ -95,11 +95,33 @@
         width: 50%;
         float: left;
     }
+    .sidebar {
+        width: 350px;
+    }
+    .main {
+        &.disableMain {
+            right: 350px;
+        }
+    }
+    .mobile {
+        display: none !important;
+    }
+    .mobile-sidebar {
+        padding: 0 !important;
+    }
+    .desktop {
+        display: block !important;
+    } 
 }
 
 @media (min-width: 992px) and (max-width: 1260px) {
     .submit-search {
         border-radius: 3px !important;
+    }
+    .btn-support {
+        &.btn-header {
+            margin-left: 0;
+        }
     }
 }
 

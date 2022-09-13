@@ -9,6 +9,8 @@
     width: 33px;
     background-color: white;
     border-radius: 0;
+    opacity: 1;
+    transition: $transitionOne;
 }
 
 @mixin colPad {

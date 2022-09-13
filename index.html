@@ -4,16 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Netmatter Site Remake</title>
-    <link rel="stylesheet" href="Assets/Styles/main.css">
+    <link rel="stylesheet" href="Assets/Styles/CSS/main.css">
     <script src="https://kit.fontawesome.com/52d68163f3.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
 
-  <body>
+  <body id="body">
     <div id="container">
       <div class="main">
+        <div class="sidebar-open"></div>
         <div id="header">
           <header>
               <div class="inner">
@@ -56,8 +59,10 @@
                           </form> 
                         </div>
                         <!-- Appears on all screen sizes -->
-                        <button type="button" class="btn btn-nav">
-                          <span class="btn-nav-icon"></span>
+                        <button type="button" class="btn btn-nav btn-burger">
+                          <span class="btn-nav-icon-1"></span>
+                          <span class="btn-nav-icon-2"></span>
+                          <span class="btn-nav-icon-3"></span>
                         </button>
                       </div>
                     </div>
@@ -349,17 +354,17 @@
               </div>
             </div>
           </div>
-          <div class="partnerships">
-            <div class="section part-sect">
-              <img class="partnership" src="Assets/Images/Partnerships/google-partner.jpg" alt="Google Partnership">
-              <img class="partnership" src="Assets/Images/Partnerships/future-50.jpg" alt="Future 50 Partnership">
-              <img class="partnership" src="Assets/Images/Partnerships/investing-in-future-growth.jpg" alt="Investing In Future Growth Partnership">
-              <img class="partnership" src="Assets/Images/Partnerships/norfolk-carbon-charter.jpg" alt="Norfolk Carbon Charter Partnership">
-              <img class="partnership" src="Assets/Images/Partnerships/PPC_logo.jpg" alt="PPC Partnership">
-              <img class="partnership" src="Assets/Images/Partnerships/princess-royal-training.jpg" alt="Princess Royal Training Partnership">
-              <img class="partnership" src="Assets/Images/Partnerships/qms.jpg" alt="QMS Partnership">
-              <img class="partnership" src="Assets/Images/Partnerships/iso_27001.jpg" alt="ISO Partnership">
-              <img class="partnership" src="Assets/Images/Partnerships/skills-of-tomorrow.jpg" alt="Skills Of Tomorrow Partnership">
+          <div class="partnerships section">
+            <div class="owl-carousel owl-theme">
+              <div class="item"><img class="partnership" src="Assets/Images/Partnerships/google-partner.jpg" alt="Google Partnership"></div>
+              <div class="item"><img class="partnership" src="Assets/Images/Partnerships/future-50.jpg" alt="Future 50 Partnership"></div>
+              <div class="item"><img class="partnership" src="Assets/Images/Partnerships/investing-in-future-growth.jpg" alt="Investing In Future Growth Partnership"></div>
+              <div class="item"><img class="partnership" src="Assets/Images/Partnerships/norfolk-carbon-charter.jpg" alt="Norfolk Carbon Charter Partnership"></div>
+              <div class="item"><img class="partnership" src="Assets/Images/Partnerships/PPC_logo.jpg" alt="PPC Partnership"></div>
+              <div class="item"><img class="partnership" src="Assets/Images/Partnerships/princess-royal-training.jpg" alt="Princess Royal Training Partnership"></div>
+              <div class="item"><img class="partnership" src="Assets/Images/Partnerships/qms.jpg" alt="QMS Partnership"></div>
+              <div class="item"><img class="partnership" src="Assets/Images/Partnerships/iso_27001.jpg" alt="ISO Partnership"></div>
+              <div class="item"><img class="partnership" src="Assets/Images/Partnerships/skills-of-tomorrow.jpg" alt="Skills Of Tomorrow Partnership"></div>
             </div>
           </div>
           <div class="welcome-container">
@@ -440,7 +445,7 @@
               <div class="news-articles">
                 <div class="row">
                   <div class="col-2">
-                    <div class="item c-1">
+                    <div class="news-block c-1">
                       <a href="#" class="article-link"></a>
                       <div class="news-banner-container">
                         <a href="#" class="category">Careers</a>
@@ -468,7 +473,7 @@
                     </div>
                   </div>
                   <div class="col-2">
-                    <div class="item c-2">
+                    <div class="news-block c-2">
                       <a href="#" class="article-link"></a>
                       <div class="news-banner-container">
                         <a href="#" class="category">News</a>
@@ -496,7 +501,7 @@
                     </div>
                   </div>
                   <div class="col-2">
-                    <div class="item c-2">
+                    <div class="news-block c-2">
                       <a href="#" class="article-link"></a>
                       <div class="news-banner-container">
                         <a href="#" class="category">Environmental News</a>
@@ -715,6 +720,184 @@
           </div>
         </footer>
       </div>
+      <div class="sidebar">
+        <div class="mobile-sidebar">
+              <ul class="mobile-nav mobile">
+                <li class="sidebar-nav-title"><a>Contact Us</a></li>
+                <li class="sidebar-nav-sect software"> 
+                  <a href="#" class="sidebar-nav-subtitle">
+                    <i class="fa-solid fa-table-cells"></i>
+                    <small>Bespoke</small>
+                    Software
+                  </a>
+                  <ul class="sidebar-nav-opt">
+                    <li><a href="#"> Workflow </a></li>
+                    <li><a href="#"> Automation </a></li>
+                    <li><a href="#"> Integration </a></li>
+                    <li><a href="#"> Database </a></li>
+                    <li><a href="#"> SharePoint </a></li>
+                    <li><a href="#"> Management </a></li>
+                    <li><a href="#"> Navision </a></li>
+                  </ul>
+                </li>
+                <li class="sidebar-nav-sect it"> 
+                  <a href="#" class="sidebar-nav-subtitle">
+                    <i class="fa-solid fa-display"></i>
+                    <small>IT</small>
+                    Support
+                  </a>
+                  <ul class="sidebar-nav-opt">
+                    <li><a href="#"> Managed IT </a></li>
+                    <li><a href="#"> Buisness IT </a></li>
+                    <li><a href="#"> Office 365 </a></li>
+                    <li><a href="#"> Consultancy </a></li>
+                    <li><a href="#"> Cloud Provider </a></li>
+                    <li><a href="#"> Bata Backup </a></li>
+                  </ul>
+                </li>
+                <li class="sidebar-nav-sect digital"> 
+                  <a href="#" class="sidebar-nav-subtitle">
+                    <i class="fa-solid fa-signal"></i>
+                    <small>Digital</small>
+                    Marketing
+                  </a>
+                  <ul class="sidebar-nav-opt">
+                    <li><a href="#"> Search (SEO) </a></li>
+                    <li><a href="#"> Paid PPC </a></li>
+                    <li><a href="#"> Conversion (CRP) </a></li>
+                    <li><a href="#"> Email </a></li>
+                    <li><a href="#"> Social Media </a></li>
+                    <li><a href="#"> Content </a></li>
+                  </ul>
+                </li>
+                <li class="sidebar-nav-sect telecoms"> 
+                  <a href="#" class="sidebar-nav-subtitle">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <small>Telecoms</small>
+                    Services
+                  </a>
+                  <ul class="sidebar-nav-opt">
+                    <li><a href="#"> Buisness Mobile </a></li>
+                    <li><a href="#"> Hosted VoIP </a></li>
+                    <li><a href="#"> Buisness VoIP </a></li>
+                    <li><a href="#"> Buisness Broadband </a></li>
+                    <li><a href="#"> Leased Line </a></li>
+                    <li><a href="#"> 3CX Systems </a></li>
+                  </ul>
+                </li>
+                <li class="sidebar-nav-sect web"> 
+                  <a href="#" class="sidebar-nav-subtitle">
+                    <i class="fa-solid fa-code"></i>
+                    <small>Web</small>
+                    Design
+                  </a>
+                  <ul class="sidebar-nav-opt">
+                    <li><a href="#"> Stylish Websites </a></li>
+                    <li><a href="#"> eCommerce Stores </a></li>
+                    <li><a href="#"> Branding </a></li>
+                    <li><a href="#"> Apps </a></li>
+                    <li><a href="#"> Web Hosting </a></li>
+                    <li><a href="#"> Pay Monthly Websites </a></li>
+                  </ul>
+                </li>
+                <li class="sidebar-nav-sect security"> 
+                  <a href="#" class="sidebar-nav-subtitle">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <small>Cyber</small>
+                    Security
+                  </a>
+                  <ul class="sidebar-nav-opt">
+                    <li><a href="#"> Assessment </a></li>
+                    <li><a href="#"> Management </a></li>
+                    <li><a href="#"> Penetration Testing </a></li>
+                    <li><a href="#"> Cyber Essentials </a></li>
+                    <li><a href="#"> PCI/DSS </a></li>
+                    <li><a href="#"> Hacker Prevention </a></li>
+                  </ul>
+                </li>
+                <li class="sidebar-nav-sect developer-course"> 
+                  <a href="#" class="sidebar-nav-subtitle">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <small>Developer</small>
+                    Course
+                  </a>
+                  <ul class="sidebar-nav-opt">
+                    <li><a href="#"> Train For A Career In Tech </a></li>
+                    <li><a href="#"> Scion Scheme Frequently Asked Questions </a></li>
+                    <li><a href="#"> Scion Collaborators </a></li>
+                  </ul>
+                </li>
+              </ul>
+        </div>
+        <ul class="sidebar-content">
+          <li class="sidebar-nav-category desktop">
+            <a href="#" class="sidebar-content-title">Services</a>
+            <ul class="sidebar-content-list">
+              <li class="sidebar-content-item"><a href="#" ><i class="fa-solid fa-angles-right"></i>Bespoke Software</a></li>
+              <li class="sidebar-content-item"><a href="#" ><i class="fa-solid fa-angles-right"></i>IT Support</a></li>
+              <li class="sidebar-content-item"><a href="#" ><i class="fa-solid fa-angles-right"></i>Digital Marketing</a></li>
+              <li class="sidebar-content-item"><a href="#" ><i class="fa-solid fa-angles-right"></i>Telecoms Services</a></li>
+              <li class="sidebar-content-item"><a href="#" ><i class="fa-solid fa-angles-right"></i>Web Design</a></li>
+              <li class="sidebar-content-item"><a href="#" ><i class="fa-solid fa-angles-right"></i>Cyber Security</a></li>
+            </ul>
+          </li>
+          <li class="sidebar-nav-category">
+            <a class="sidebar-content-title">Our Knowledge</a>
+            <ul class="sidebar-content-list">
+              <li class="sidebar-content-item"><a href="#" ><i class="fa-solid fa-angles-right"></i>Technologies</a></li>
+              <li class="sidebar-content-item"><a href="#" ><i class="fa-solid fa-angles-right"></i>News</a></li>
+              <li class="sidebar-content-item"><a href="#" ><i class="fa-solid fa-angles-right"></i>Insights</a></li>
+            </ul>
+          </li>
+          <li class="sidebar-nav-category">
+            <a class="sidebar-content-title">Training</a>
+            <ul class="sidebar-content-list">
+              <li class="sidebar-content-item"><a href="#" ><i class="fa-solid fa-angles-right"></i>Train For a Career In Tech</a></li>
+              <li class="sidebar-content-item"><a href="#" ><i class="fa-solid fa-angles-right"></i>SCS Frequently Asked Questions</a></li>
+              <li class="sidebar-content-item"><a href="#" ><i class="fa-solid fa-angles-right"></i>Scion Collaborators</a></li>
+            </ul>
+          </li>
+          <li class="sidebar-nav-category">
+            <a class="sidebar-content-title">Events</a>
+            <ul class="sidebar-content-list">
+              <li class="sidebar-content-item"><a href="#" ><i class="fa-solid fa-angles-right"></i>Business Automation Seminar</a></li>
+            </ul>
+          </li>
+          <li class="sidebar-nav-category">
+            <a class="sidebar-content-title">Our Company</a>
+            <ul class="sidebar-content-list">
+              <li class="sidebar-content-item"><a href="#" ><i class="fa-solid fa-angles-right"></i>Our Culture</a></li>
+              <li class="sidebar-content-item"><a href="#" ><i class="fa-solid fa-angles-right"></i>Our Teams</a></li>
+              <li class="sidebar-content-item"><a href="#" ><i class="fa-solid fa-angles-right"></i>Our Careers</a></li>
+              <li class="sidebar-content-item"><a href="#" ><i class="fa-solid fa-angles-right"></i>Our Benefits</a></li>
+              <li class="sidebar-content-item"><a href="#" ><i class="fa-solid fa-angles-right"></i>IT Support Great Yarmouth</a></li>
+            </ul>
+          </li>
+          <li class="sidebar-nav-category">
+            <a class="sidebar-content-title">Our Work</a>
+            <ul class="sidebar-content-list">
+              <li class="sidebar-content-item"><a href="#" ><i class="fa-solid fa-angles-right"></i>Case Studies</a></li>
+            </ul>
+          </li>
+          <li class="sidebar-nav-category">
+            <a class="sidebar-content-title">Covid Risk Assessments</a>
+          </li>
+          <li class="sidebar-nav-category">
+            <a class="sidebar-content-title">Contact Us</a>
+            <ul class="sidebar-content-list">
+              <li class="sidebar-content-item"><a href="#" ><i class="fa-solid fa-angles-right"></i>Cambridge Office</a></li>
+              <li class="sidebar-content-item"><a href="#" ><i class="fa-solid fa-angles-right"></i>Wymondham Office</a></li>
+              <li class="sidebar-content-item"><a href="#" ><i class="fa-solid fa-angles-right"></i>Great Yarmouth Office</a></li>
+            </ul>
+          </li>
+          <li class="sidebar-nav-category mobile">
+            <a class="sidebar-content-title">Support</a>
+          </li>
+        </ul>
+      </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="Assets/JS/main.js"></script>
   </body>
 </html>
