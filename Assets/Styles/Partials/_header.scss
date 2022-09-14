@@ -1,5 +1,19 @@
 #header {
     background: white;
+    z-index: 3;
+    .row {
+        display: table;
+        width: 100%;
+        margin: 0;
+        height: 70px;
+    }
+}
+#sticky-header {
+    background: white;
+    z-index: 4;
+    position: sticky;
+    top: 0;
+    display: none;
     .row {
         display: table;
         width: 100%;

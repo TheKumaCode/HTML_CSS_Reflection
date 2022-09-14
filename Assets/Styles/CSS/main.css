@@ -248,8 +248,24 @@ h2 {
 
 #header {
   background: white;
+  z-index: 3;
 }
 #header .row {
+  display: table;
+  width: 100%;
+  margin: 0;
+  height: 70px;
+}
+
+#sticky-header {
+  background: white;
+  z-index: 4;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: none;
+}
+#sticky-header .row {
   display: table;
   width: 100%;
   margin: 0;
