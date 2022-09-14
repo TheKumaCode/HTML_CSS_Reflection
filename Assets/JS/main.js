@@ -45,14 +45,14 @@ var lastPosition = 0;
 const mainHeader = document.getElementById('header')
 const stickyHeader = document.getElementById('sticky-header')
 
-document.addEventListener('scroll', () => {
-    let position = window.scrollY
+window.addEventListener('scroll', () => {
+    let position = window.scrollY;
     if (position < lastPosition && position >= 168) {
-        stickyHeader.style.display = "block"
-    } else if (position > lastPosition) {
-        stickyHeader.style.display = "none"
+        stickyHeader.style.display = "block";
+    } if (position > lastPosition || position < 168) {
+        stickyHeader.style.display = "none";
     } else {
         return;
     }
-    lastPosition = position <= 0 ? 0 : position
+    lastPosition = position <= 0 ? 0 : position;
 })
