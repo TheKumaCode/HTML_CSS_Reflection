@@ -4,9 +4,15 @@ const body = document.getElementById('body')
 const sidebar = document.querySelector('.sidebar')
 const openedSidebar = document.querySelector('.sidebar-open')
 const navBtn = header.querySelector('.btn-nav')
+const stickyHeader = document.getElementById('sticky-header')
+const navBtnSticky = stickyHeader.querySelector('.btn-nav')
 
 $(document).ready(function () {
     navBtn.addEventListener('click', (e) => {
+        openSidebar(e)
+    })
+
+    navBtnSticky.addEventListener('click', (e) => {
         openSidebar(e)
     })
 
@@ -20,6 +26,7 @@ function openSidebar(e) {
     openedSidebar.style.display = "block"
     sidebar.style.zIndex = "5"
     main.classList.add('disableMain')
+    stickyHeader.classList.add('disableMain')
     e.target.classList.add('sidebarOn')
 }
 
@@ -28,7 +35,9 @@ function closeSidebar() {
     sidebar.removeAttribute('style')
     openedSidebar.style.display = "none"
     main.classList.remove('disableMain')
+    stickyHeader.classList.remove('disableMain')
     navBtn.classList.remove('sidebarOn')
+    navBtnSticky.classList.remove('sidebarOn')
 }
 
 $('.owl-carousel').owlCarousel({
@@ -42,17 +51,21 @@ $('.owl-carousel').owlCarousel({
 })
 
 var lastPosition = 0;
-const mainHeader = document.getElementById('header')
-const stickyHeader = document.getElementById('sticky-header')
 
 window.addEventListener('scroll', () => {
-    let position = window.scrollY;
-    if (position < lastPosition && position >= 168) {
-        stickyHeader.style.display = "block";
-    } if (position > lastPosition || position < 168) {
-        stickyHeader.style.display = "none";
-    } else {
-        return;
+    const position = window.scrollY;
+    if ( position > lastPosition || position < stickyHeader.offsetHeight) {
+        stickyHeader.classList.add('hideSticky')
+        stickyHeader.classList.remove('showSticky')
+        stickyHeader.style.top = "-" + stickyHeader.offsetHeight + "px"
+        if (position < stickyHeader.offsetHeight + 10) {
+            stickyHeader.style.display = "none"
+        }
+    } else if (position < lastPosition) {
+        stickyHeader.removeAttribute('style')
+        stickyHeader.style.display = "block"
+        stickyHeader.classList.remove('hideSticky')
+        stickyHeader.classList.add('showSticky')
     }
-    lastPosition = position <= 0 ? 0 : position;
+    lastPosition = window.scrollY;
 })

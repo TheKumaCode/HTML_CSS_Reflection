@@ -262,7 +262,7 @@ h2 {
   z-index: 4;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: 0px;
   display: none;
 }
 #sticky-header .row {
@@ -270,6 +270,17 @@ h2 {
   width: 100%;
   margin: 0;
   height: 70px;
+}
+#sticky-header.showSticky {
+  top: 0;
+  transition: all 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+#sticky-header.hideSticky {
+  transition: all 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+#sticky-header.disableMain {
+  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform: translate(-275px, 0px);
 }
 
 .h-r1 {
@@ -1561,8 +1572,8 @@ a.linked-in:hover {
   .sidebar {
     width: 350px;
   }
-  .main.disableMain {
-    right: 350px;
+  .disableMain {
+    transform: translate(-350px, 0px);
   }
   .mobile {
     display: none !important;

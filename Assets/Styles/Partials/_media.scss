@@ -98,10 +98,8 @@
     .sidebar {
         width: 350px;
     }
-    .main {
-        &.disableMain {
-            right: 350px;
-        }
+    .disableMain {
+        transform: translate(-350px, 0px);
     }
     .mobile {
         display: none !important;
