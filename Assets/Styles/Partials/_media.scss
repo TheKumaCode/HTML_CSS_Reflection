@@ -99,7 +99,7 @@
         width: 350px;
     }
     .disableMain {
-        transform: translate(-350px, 0px);
+        transform: translate(-350px, 0px) !important;
     }
     .mobile {
         display: none !important;

@@ -26,7 +26,6 @@ function openSidebar(e) {
     openedSidebar.style.display = "block"
     sidebar.style.zIndex = "5"
     main.classList.add('disableMain')
-    stickyHeader.classList.add('disableMain')
     e.target.classList.add('sidebarOn')
 }
 
@@ -35,7 +34,6 @@ function closeSidebar() {
     sidebar.removeAttribute('style')
     openedSidebar.style.display = "none"
     main.classList.remove('disableMain')
-    stickyHeader.classList.remove('disableMain')
     navBtn.classList.remove('sidebarOn')
     navBtnSticky.classList.remove('sidebarOn')
 }
@@ -57,13 +55,14 @@ window.addEventListener('scroll', () => {
     if ( position > lastPosition || position < stickyHeader.offsetHeight) {
         stickyHeader.classList.add('hideSticky')
         stickyHeader.classList.remove('showSticky')
-        stickyHeader.style.top = "-" + stickyHeader.offsetHeight + "px"
+        stickyHeader.style.transform = "translate(0px, -" + stickyHeader.offsetHeight + "px)"
         if (position < stickyHeader.offsetHeight + 10) {
             stickyHeader.style.display = "none"
         }
     } else if (position < lastPosition) {
         stickyHeader.removeAttribute('style')
         stickyHeader.style.display = "block"
+        stickyHeader.style.transform = "translate(0px, 0px)"
         stickyHeader.classList.remove('hideSticky')
         stickyHeader.classList.add('showSticky')
     }
