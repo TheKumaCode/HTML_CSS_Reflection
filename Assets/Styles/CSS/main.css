@@ -114,6 +114,72 @@ h2 {
   background: white;
 }
 
+.cookie {
+  border-radius: 5px;
+  border: 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+.cookie-content {
+  background-color: white;
+  border-radius: 5px;
+}
+.cookie-content-header {
+  padding: 15px 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.cookie-content-header_title {
+  margin: 0;
+}
+.cookie-content-body {
+  position: relative;
+  padding: 20px;
+}
+.cookie-content-body_text {
+  margin-top: 0;
+  color: #666;
+}
+.cookie-content-body_text a {
+  cursor: pointer;
+}
+.cookie-content-body_text a:hover {
+  text-decoration: underline;
+}
+.cookie-content-footer {
+  border-top: 1px solid #e5e5e5;
+  padding: 19px 20px 20px;
+  text-align: right;
+}
+.cookie-content-footer-row {
+  margin: 0 -15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cookie-content-footer-row_item-1, .cookie-content-footer-row_item-2 {
+  text-align: center;
+  padding: 0px 15px;
+}
+.cookie-content-footer-row_item-1 a, .cookie-content-footer-row_item-2 a {
+  width: 100%;
+  color: white;
+}
+.cookie-content-footer-row_item-1 {
+  margin-bottom: 25px;
+}
+.cookie-content-footer-row_item-1 a {
+  background: #999aa2;
+}
+.cookie-content-footer-row_item-1 a:hover {
+  background: #84858f;
+}
+.cookie-content-footer-row_item-2 a {
+  background: #926fb1;
+}
+.cookie-content-footer-row_item-2 a:hover {
+  background: #79539a;
+}
+
 .main {
   position: relative;
   right: 0;
@@ -1506,6 +1572,19 @@ a.linked-in:hover {
   }
   .clients-section {
     display: block;
+  }
+  .cookie-content {
+    max-width: 600px;
+  }
+  .cookie .cookie-content-footer-row {
+    flex-direction: row;
+  }
+  .cookie .cookie-content-footer-row_item-1, .cookie .cookie-content-footer-row_item-2 {
+    width: 50%;
+    float: left;
+  }
+  .cookie .cookie-content-footer-row_item-1 {
+    margin-bottom: 0px;
   }
 }
 @media (min-width: 992px) {

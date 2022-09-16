@@ -7,13 +7,29 @@ const navBtn = header.querySelector('.btn-nav')
 const stickyHeader = document.getElementById('sticky-header')
 const navBtnSticky = stickyHeader.querySelector('.btn-nav')
 
+const cookiesPopUp = document.getElementById('cookies-pop-up')
+const cookiesAccept = cookiesPopUp.querySelector('.accept-cookies')
+
+window.addEventListener('load', () => {
+    if (!document.cookie.split("; ").find(item => item.startsWith('cookies=accepted'))) {
+        cookiesPopUp.showModal()
+        body.style.overflow = "hidden"
+    }
+})
+
+cookiesAccept.addEventListener('click', ()=> {
+    cookiesPopUp.close() 
+    document.cookie = "cookies=accepted; max-age=315360000;"
+    body.removeAttribute('style')
+})
+
 $(document).ready(function () {
-    navBtn.addEventListener('click', (e) => {
-        openSidebar(e)
+    navBtn.addEventListener('click', () => {
+        openSidebar()
     })
 
-    navBtnSticky.addEventListener('click', (e) => {
-        openSidebar(e)
+    navBtnSticky.addEventListener('click', () => {
+        openSidebar()
     })
 
     openedSidebar.addEventListener('click', () => {
@@ -21,12 +37,13 @@ $(document).ready(function () {
     })
 })
 
-function openSidebar(e) {
+function openSidebar() {
     body.style.overflow = "hidden";
     openedSidebar.style.display = "block"
     sidebar.style.zIndex = "5"
     main.classList.add('disableMain')
-    e.target.classList.add('sidebarOn')
+    navBtn.classList.add('sidebarOn')
+    navBtnSticky.classList.add('sidebarOn')
 }
 
 function closeSidebar() {

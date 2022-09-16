@@ -33,6 +33,23 @@
     .clients-section {
         display: block;
     }
+    .cookie {
+        &-content {
+            max-width: 600px;
+        } 
+        .cookie-content-footer-row {
+            flex-direction: row;
+        }
+        .cookie-content-footer-row_item {
+            &-1, &-2 {
+                width: 50%;
+                float: left;
+            }
+            &-1 {
+                margin-bottom: 0px;
+            }
+        }
+    }
 }
 
 //Computer Screen Changes
