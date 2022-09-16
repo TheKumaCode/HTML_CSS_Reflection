@@ -39,7 +39,7 @@ $(document).ready(function () {
 
     stickyHeader.onmouseover = () => {
         body.style.overflow = "hidden"
-        body.style.marginRight = "14px"
+        body.style.marginRight = "17px"
     }
 
     stickyHeader.onmouseout = () => {
