@@ -11,7 +11,7 @@ const cookiesPopUp = document.getElementById('cookies-pop-up')
 const cookiesAccept = cookiesPopUp.querySelector('.accept-cookies')
 
 window.addEventListener('load', () => {
-    if (document.getCookie("cookies") == "accepted") {
+    if (!document.cookie.split("; ").find(item => item.startsWith('cookies=accepted'))) {
         cookiesPopUp.showModal()
         body.style.overflow = "hidden"
     }
