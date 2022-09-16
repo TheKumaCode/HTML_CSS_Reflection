@@ -1,6 +1,7 @@
 const header = document.getElementById('header')
 const main = document.querySelector('.main')
 const body = document.getElementById('body')
+const html = document.getElementsByTagName('html')
 const sidebar = document.querySelector('.sidebar')
 const openedSidebar = document.querySelector('.sidebar-open')
 const navBtn = header.querySelector('.btn-nav')
@@ -35,6 +36,16 @@ $(document).ready(function () {
     openedSidebar.addEventListener('click', () => {
         closeSidebar()
     })
+
+    stickyHeader.onmouseover = () => {
+        body.style.overflow = "hidden"
+        body.style.marginRight = "14px"
+    }
+
+    stickyHeader.onmouseout = () => {
+        body.style.removeProperty("overflow")
+        body.style.marginRight = "0px"
+    }
 })
 
 function openSidebar() {
