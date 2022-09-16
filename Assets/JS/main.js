@@ -38,13 +38,11 @@ $(document).ready(function () {
     })
 
     stickyHeader.onmouseover = () => {
-        body.style.overflow = "hidden"
-        body.style.marginRight = "17px"
+        body.classList.add('stopScroll')
     }
 
     stickyHeader.onmouseout = () => {
-        body.style.removeProperty("overflow")
-        body.style.marginRight = "0px"
+        body.classList.remove('stopScroll')
     }
 })
 
@@ -73,7 +71,7 @@ $('.owl-carousel').owlCarousel({
     autoWidth: true,
     autoplay: true,
     autoplayTimeout: 3000,
-    autoplayPauseOnHover: true
+    autoplayHoverPause: true
 })
 
 var lastPosition = 0;

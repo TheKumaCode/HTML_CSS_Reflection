@@ -12,6 +12,10 @@ body {
   color: #666;
   overflow: auto;
 }
+body.stopScroll {
+  overflow: hidden;
+  margin-right: 17px;
+}
 
 span {
   display: block;
