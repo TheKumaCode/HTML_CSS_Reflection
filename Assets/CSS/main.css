@@ -1595,10 +1595,10 @@ a.linked-in:hover {
   .btn-header {
     display: inline-block;
   }
-  #input-search {
+  .input-search {
     display: none;
   }
-  #input-search:focus {
+  .input-search:focus {
     border-color: #5bc0de;
     outline: 0;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), 0 0 8px rgba(91, 192, 222, 0.6);
@@ -1667,6 +1667,9 @@ a.linked-in:hover {
   .submit-search {
     border-radius: 3px !important;
   }
+  .input-search {
+    display: none !important;
+  }
   .btn-support.btn-header {
     margin-left: 0;
   }
@@ -1680,7 +1683,7 @@ a.linked-in:hover {
   .container {
     width: 1200px;
   }
-  #input-search {
+  .input-search {
     display: inline-block;
     margin-left: 0;
     width: 240px;

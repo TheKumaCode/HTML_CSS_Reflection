@@ -57,7 +57,7 @@
     .btn-header {
         display: inline-block;
     }
-    #input-search {
+    .input-search {
         display: none;
         &:focus {
             border-color: #5bc0de;
@@ -133,6 +133,9 @@
     .submit-search {
         border-radius: 3px !important;
     }
+    .input-search {
+        display: none !important;
+    }
     .btn-support {
         &.btn-header {
             margin-left: 0;
@@ -152,7 +155,7 @@
     .container {
         width: 1200px;
     }
-    #input-search {
+    .input-search {
         display: inline-block;
         margin-left: 0;
         width: 240px;
