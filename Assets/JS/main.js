@@ -47,7 +47,6 @@ $(document).ready(function () {
 })
 
 function openSidebar() {
-    body.style.overflow = "hidden";
     openedSidebar.style.display = "block"
     sidebar.style.zIndex = "5"
     main.classList.add('disableMain')
@@ -56,7 +55,6 @@ function openSidebar() {
 }
 
 function closeSidebar() {
-    body.removeAttribute('style')
     sidebar.removeAttribute('style')
     openedSidebar.style.display = "none"
     main.classList.remove('disableMain')

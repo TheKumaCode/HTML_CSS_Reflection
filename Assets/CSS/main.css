@@ -10,11 +10,6 @@ body {
   font-size: 1rem;
   letter-spacing: 0.4px;
   color: #666;
-  overflow: auto;
-}
-body.stopScroll {
-  overflow: hidden;
-  margin-right: 17px;
 }
 
 span {
@@ -116,6 +111,21 @@ h2 {
 
 .main-content {
   background: white;
+}
+
+body {
+  height: 100%;
+}
+body #container {
+  overflow: hidden;
+  height: 100%;
+}
+body #container .main {
+  overflow-y: scroll;
+  height: 100%;
+}
+body #container .main .main-scrollbar {
+  overflow: hidden;
 }
 
 .cookie {
