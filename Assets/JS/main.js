@@ -74,8 +74,8 @@ $('.owl-carousel').owlCarousel({
 
 var lastPosition = 0;
 
-window.addEventListener('scroll', () => {
-    const position = window.scrollY;
+main.addEventListener('scroll', () => {
+    const position = main.scrollTop;
     if ( position > lastPosition || position < stickyHeader.offsetHeight) {
         stickyHeader.classList.add('hideSticky')
         stickyHeader.classList.remove('showSticky')
@@ -90,5 +90,5 @@ window.addEventListener('scroll', () => {
         stickyHeader.classList.remove('hideSticky')
         stickyHeader.classList.add('showSticky')
     }
-    lastPosition = window.scrollY;
+    lastPosition = main.scrollTop;
 })
