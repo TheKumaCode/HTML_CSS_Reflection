@@ -121,11 +121,15 @@ body #container {
   height: 100%;
 }
 body #container .main {
+  overflow: hidden;
+  height: 100%;
+}
+body #container .main-scrollbar {
   overflow-y: scroll;
   height: 100%;
 }
-body #container .main .main-scrollbar {
-  overflow: hidden;
+body #container .main-scrollbar-cont.stopScroll {
+  position: fixed;
 }
 
 .cookie {

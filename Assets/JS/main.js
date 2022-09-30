@@ -38,13 +38,27 @@ $(document).ready(function () {
     })
 
     stickyHeader.onmouseover = () => {
-        body.classList.add('stopScroll')
+        disable()
     }
 
     stickyHeader.onmouseout = () => {
-        body.classList.remove('stopScroll')
+        enable()
     }
 })
+
+function preventScroll(e){
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+}
+
+function disable(){
+  mainScroll.addEventListener('wheel', preventScroll);
+}
+
+function enable(){
+    mainScroll.removeEventListener('wheel', preventScroll);
+}
 
 function openSidebar() {
     openedSidebar.style.display = "block"
@@ -73,9 +87,10 @@ $('.owl-carousel').owlCarousel({
 })
 
 var lastPosition = 0;
+const mainScroll = document.querySelector('.main-scrollbar')
 
-main.addEventListener('scroll', () => {
-    const position = main.scrollTop;
+mainScroll.addEventListener('scroll', () => {
+    const position = mainScroll.scrollTop;
     if ( position > lastPosition || position < stickyHeader.offsetHeight) {
         stickyHeader.classList.add('hideSticky')
         stickyHeader.classList.remove('showSticky')
@@ -90,5 +105,5 @@ main.addEventListener('scroll', () => {
         stickyHeader.classList.remove('hideSticky')
         stickyHeader.classList.add('showSticky')
     }
-    lastPosition = main.scrollTop;
+    lastPosition = mainScroll.scrollTop;
 })

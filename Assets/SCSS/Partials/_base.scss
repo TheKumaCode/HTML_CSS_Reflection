@@ -121,10 +121,16 @@ body {
         overflow: hidden;
         height: 100%;
         .main {
-            overflow-y: scroll;
+            overflow: hidden;
             height: 100%;
-            .main-scrollbar {
-                overflow: hidden;
+            &-scrollbar {
+                overflow-y: scroll;
+                height: 100%;
+                &-cont {
+                    &.stopScroll {
+                        position: fixed;
+                    }
+                }
             }
         }
     }
