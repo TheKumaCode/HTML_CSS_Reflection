@@ -80,7 +80,7 @@ label {
 .checked {
     position: absolute;
     top: 2px;
-    left: 10px;
+    left: 8px;
     font-size: 1.5rem;
     display: none;
 }
@@ -101,7 +101,7 @@ input.checkbox {
     position: absolute;
     width: 32px;
     height: 32px;
-    -webkit-appearance: none;
+    appearance: none;
     cursor: pointer;
     &:after {
         content: "";

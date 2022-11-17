@@ -127,6 +127,16 @@
     .desktop {
         display: block !important;
     } 
+    .contact-offices {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        .contact-location {
+            max-width: calc(100% / 3);
+            padding: 0px 15px;
+            margin: 0;
+        }
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1260px) {
@@ -204,6 +214,17 @@
     .banner-img {
         opacity: 50%;
     }
+    .nav-directory {
+        border-top: 1px solid $color-primary;
+    }
+    .contact-offices_title {
+        padding: 24px 0px;
+        background: $color-primary;
+        .contact-title {
+            margin: 0px;
+            color: white;
+        }
+    }
 }
 
 @media (max-width: 767px) {
@@ -222,5 +243,8 @@
     }
     .services-r1, .services-r2 {
         top: -8px;
+    }
+    .nav-directory {
+        display: none;
     }
 }
