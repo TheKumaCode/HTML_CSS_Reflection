@@ -1,7 +1,6 @@
-<?php
-  include_once './Assets/PHP/database.php';
+<?php 
+    include_once('./Assets/PHP/database.php');
 ?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -303,90 +302,49 @@
                 <div class="container section">
                   <div class="news-articles">
                     <div class="row">
-                      <div class="col-2">
-                        <div class="news-block c-1">
-                          <a href="#" class="article-link"></a>
-                          <div class="news-banner-container">
-                            <a href="#" class="category">Careers</a>
-                            <a href="#" class="news-img-container">
-                              <img src="Assets/Images/business-development-account-zUub.jpg" alt="Buisness Development Acount Manager" class="img">
-                            </a>
-                          </div>
-                          <div class="block">
-                            <h3>
-                              <a href="#">Business Development Account Manager</a>
-                            </h3>
-                            <p>Salary Range £35k+ per annum + Bonus + Benefits Hours 40 hours per week, Mon – Fri Location Wymondha...</p>
-                            <a class="btn btn-support">Read More</a>
-                            <div class="user">
-                              <div class="avatar">
-                                <img src="Assets/Images/elliott-peacock-w8vu.jpg" alt="Elliott Peacock">
+                      <?php
+
+                      $sql = "SELECT * FROM articles";
+                      $result = $connect->query($sql);
+
+                      if ($connect->connect_error) {
+                        die("Connection failed: " . $connect->connect_error);
+                      }
+                      
+                      if ($result->num_rows > 0) {
+                        while($row = $result->fetch_assoc()) { ?>
+                          <div class="col-2">
+                            <div class="news-block <?php echo $row['Article_Style'] ?>">
+                              <a href="#" class="article-link"></a>
+                              <div class="news-banner-container">
+                                <a href="#" class="category"> <?php echo $row['Article_Category'] ?>
+                                <a href="#" class="news-img-container">
+                                  <img src="<?php echo $row['Article_ImgURL'] ?>" alt="<?php echo $row['Article_ImgAlt'] ?>" class="img">
+                                </a>
                               </div>
-                              <div class="details">
-                                <strong class="primary-text">Posted by Elliott Peacock</strong>
-                                <br>
-                                  9th August 2022
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-2">
-                        <div class="news-block c-2">
-                          <a href="#" class="article-link"></a>
-                          <div class="news-banner-container">
-                            <a href="#" class="category">News</a>
-                            <a href="#" class="news-img-container">
-                              <img src="Assets/Images/the-risks-of-kEsp.jpg" alt="Netmatters Road To Net Zero" class="img">
-                            </a>
-                          </div>
-                          <div class="block">
-                            <h3>
-                              <a href="#">The Risks Of Not Being Cookie Compliant</a>
-                            </h3>
-                            <p>Are You Cookie Compliant? We’ve all heard of website cookies. Most people understand the premise of...</p>
-                            <a class="btn btn-support">Read More</a>
-                            <div class="user">
-                              <div class="avatar">
-                                <img src="Assets/Images/netmatters-ltd-VXAv.png" alt="Netmatters">
-                              </div>
-                              <div class="details">
-                                <strong class="primary-text">Posted by Netmatters</strong>
-                                <br>
-                                  4th August 2022
+                              <div class="block">
+                                <h3>
+                                  <a href="#"><?php echo $row['Article_Title'] ?></a>
+                                </h3>
+                                <p><?php echo $row['Article_About'] ?></p>
+                                <a class="btn btn-support">Read More</a>
+                                <div class="user">
+                                  <div class="avatar">
+                                    <img src="<?php echo $row['Article_AvatarURL'] ?>" alt="<?php echo $row['Article_AvatarAlt'] ?>">
+                                  </div>
+                                  <div class="details">
+                                    <strong class="primary-text">Posted by <?php echo $row['Article_AvatarAlt'] ?></strong>
+                                    <br>
+                                    <?php echo $row['Article_Date'] ?>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="col-2">
-                        <div class="news-block c-2">
-                          <a href="#" class="article-link"></a>
-                          <div class="news-banner-container">
-                            <a href="#" class="category">Environmental News</a>
-                            <a href="#" class="news-img-container">
-                              <img src="Assets/Images/netmatters-road-to-MEcu.jpg" alt="Netmatters Road To Net Zero" class="img">
-                            </a>
-                          </div>
-                          <div class="block">
-                            <h3>
-                              <a href="#">Netmatters Road To Net Zero</a>
-                            </h3>
-                            <p>Driving through our 'Road to Net Zero' We have some fantastic news to share regarding our latest add...</p>
-                            <a class="btn btn-support">Read More</a>
-                            <div class="user">
-                              <div class="avatar">
-                                <img src="Assets/Images/netmatters-ltd-VXAv.png" alt="Netmatters">
-                              </div>
-                              <div class="details">
-                                <strong class="primary-text">Posted by Netmatters</strong>
-                                <br>
-                                  3rd August 2022
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                        <?php } ?>
+                      <?php  }
+                        $connect->close();
+                      ?>
                     </div>
                   </div>
                 </div>

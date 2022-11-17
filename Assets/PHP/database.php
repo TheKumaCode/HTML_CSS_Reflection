@@ -6,3 +6,6 @@ $dbPassword = "";
 $dbName = "news";
 
 $connect = mysqli_connect($dbServerName, $dbUsername, $dbPassword, $dbName);
+
+
+    
