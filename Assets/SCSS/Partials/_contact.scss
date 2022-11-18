@@ -202,35 +202,37 @@
                     font-size: 0.85rem;
                 }
             }
-            .err_messages {
-                display: flex;
-                flex-direction: column;
-                .err_message {
-                    width: 100%;
-                    padding: 15px;
-                    margin-bottom: 20px;
-                    border: 1px solid #ebccd1;
-                    color: #a94442;
-                    background: #f2dede;
-                    &.success {
-                        background-color: #2ecc71;
-                        border: 0;
-                        color: white;
-                    }
-                    .err_close {
-                        float: right;
-                        font-size: 21px;
-                        opacity: .2;
-                        color: black;
-                        font-weight: 700;
-                        line-height: 1.2;
-                        cursor: pointer;
-                        user-select: none;
-                        &:hover {
-                            opacity: .5;
-                        }
-                    }
-                }
+        }
+    }
+}
+
+
+.err_messages {
+    display: flex;
+    flex-direction: column;
+    .err_message {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 1px solid #ebccd1;
+        color: #a94442;
+        background: #f2dede;
+        &.success {
+            background-color: #2ecc71;
+            border: 0;
+            color: white;
+        }
+        .err_close {
+            float: right;
+            font-size: 21px;
+            opacity: .2;
+            color: black;
+            font-weight: 700;
+            line-height: 1.2;
+            cursor: pointer;
+            user-select: none;
+            &:hover {
+                opacity: .5;
             }
         }
     }

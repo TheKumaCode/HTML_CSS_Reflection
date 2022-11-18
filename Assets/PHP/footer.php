@@ -12,7 +12,7 @@
             <li><a href="#">Cookie Policy</a></li>
             <li><a href="#">Terms & Conditions</a></li>
             <li><a href="#">Environmental Policy</a></li>
-            <li><a href="./Pages/contact.php">Contact Us</a></li>
+            <li><a class="contact-btn" href="./Pages/contact.php">Contact Us</a></li>
             </ul>
         </div>
         <div class="service">

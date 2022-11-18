@@ -112,6 +112,7 @@ mainScroll.addEventListener('scroll', () => {
 
 if (body.classList.contains('contact-page')) {
     var mainLogos = document.querySelectorAll('.main-logo-header');
+    var contactBtns = document.querySelectorAll('.contact-btn');
     const showTimes = document.querySelector('.opening-hours_open');
     const timesMenu = document.querySelector('.opening-hours_menu');
     const close = document.querySelectorAll('.err_close');
@@ -119,6 +120,12 @@ if (body.classList.contains('contact-page')) {
     for (var i = 0; i < mainLogos.length; i ++) {
         mainLogos[i].src = "../Assets/Images/f-logo.png";
     }
+
+    for (var j = 0; j < contactBtns.length; j++) {
+        contactBtns[j].setAttribute('href', "./contact.php");
+    }
+
+    document['sign-up'].action = "./contact.php#newsletter";
 
     showTimes.addEventListener('click', () => {
         if (timesMenu.classList.contains('active')) {
@@ -131,4 +138,5 @@ if (body.classList.contains('contact-page')) {
     close.forEach((e) => e.addEventListener('click', () => {
         e.parentElement.remove();
     }))
+
 }

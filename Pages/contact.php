@@ -20,6 +20,72 @@
     if(!isset($success)) {
         $success = null;
     }
+    if(!isset($marketing)) {
+        $marketing = "";
+    }
+    
+    include_once('../Assets/PHP/database.php');
+
+
+    $name = filter_input(INPUT_POST, 'name');
+    $company = filter_input(INPUT_POST, 'company');
+    $email = filter_input(INPUT_POST, 'email');
+    $number = filter_input(INPUT_POST, 'number');
+    $subject = filter_input(INPUT_POST, 'subject');
+    $message = filter_input(INPUT_POST, 'message');
+    $marketing = filter_input(INPUT_POST, 'marketing-preference');
+    $phone_regex = "/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/";
+
+
+    if(empty($name)) {
+        $err_name = "Name is required.";
+    }
+
+    if(empty($email)) {
+        $err_email = "Email is required.";
+    } elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $err_email = "Email is invalid.";
+    }
+
+    if(empty($number)) {
+        $err_number = "Number is required.";
+    } elseif(!preg_match($phone_regex, $number)) {
+        $err_number = "Number is invalid.";
+    }
+
+    if(empty($subject)) {
+        $err_subject = "Subject is required.";
+    }
+
+    if(empty($message)) {
+        $err_message = "Message is required.";
+    } elseif(strlen($message) < 6) {
+        $err_message = "Message needs to be at least 5 characters.";
+    }
+
+    if(isset($_POST['submit']) && empty($err_name) && empty($err_email) && empty($err_number) && empty($err_subject) && empty($err_message)) {
+
+        $submit = "INSERT INTO `contact`(`ID`, `Contact_Name`, `Contact_Company`, `Contact_Email`, `Contact_Number`, `Contact_Subject`, `Contact_Message`) VALUES ('','{$name}','{$company}','{$email}','{$number}','{$subject}','{$message}')";
+        $connect->query($submit);
+
+        if(isset($marketing)) {
+            $submit_marketing = "INSERT INTO `newsletter`(`ID`, `Newsletter_Name`, `Newsletter_Email`) VALUES ('', '{$name}', '{$email}')";
+            $connect->query($submit_marketing);
+        }
+
+        $name = "";
+        $company = "";
+        $email = "";
+        $number = "";
+        $subject = "";
+        $message = "";
+        $marketing = "";
+
+
+        $success = "Successfully submitted the enquiry.";
+    }
+
+    include('../Assets/PHP/newsletter-form.php');
 ?>
 
 <!DOCTYPE html>
@@ -159,84 +225,86 @@
                                     </div>
                                 </div>
                                 <div class="contact-page-form-section form-two">
-                                    <form action="./form-results.php#contact-form" method="POST" accept-charset="UTF-8" id="contact-form" novalidate>
+                                    <form action="./contact.php#contact-form" method="POST" accept-charset="UTF-8" id="contact-form" novalidate>
                                         <div class="err_messages">
-                                            <?php if(isset($err_name)) { ?>
-                                                <div class="err_message">
-                                                    <?php echo htmlspecialchars($err_name); ?>
-                                                    <div class="err_close">×</div>
-                                                </div>
-                                            <?php } ?>
+                                            <?php if (isset($_POST['submit'])){ ?>
+                                                <?php if(isset($err_name)) { ?>
+                                                    <div class="err_message">
+                                                        <?php echo htmlspecialchars($err_name); ?>
+                                                        <div class="err_close">×</div>
+                                                    </div>
+                                                <?php } ?>
 
-                                            <?php if(isset($err_email)) { ?>
-                                                <div class="err_message">
-                                                    <?php echo htmlspecialchars($err_email); ?>
-                                                    <div class="err_close">×</div>
-                                                </div>
-                                            <?php } ?>
+                                                <?php if(isset($err_email)) { ?>
+                                                    <div class="err_message">
+                                                        <?php echo htmlspecialchars($err_email); ?>
+                                                        <div class="err_close">×</div>
+                                                    </div>
+                                                <?php } ?>
 
-                                            <?php if(isset($err_number)) { ?>
-                                                <div class="err_message">
-                                                    <?php echo htmlspecialchars($err_number); ?>
-                                                    <div class="err_close">×</div>
-                                                </div>
-                                            <?php } ?>
+                                                <?php if(isset($err_number)) { ?>
+                                                    <div class="err_message">
+                                                        <?php echo htmlspecialchars($err_number); ?>
+                                                        <div class="err_close">×</div>
+                                                    </div>
+                                                <?php } ?>
 
-                                            <?php if(isset($err_subject)) { ?>
-                                                <div class="err_message">
-                                                    <?php echo htmlspecialchars($err_subject); ?>
-                                                    <div class="err_close">×</div>
-                                                </div>
-                                            <?php } ?>
+                                                <?php if(isset($err_subject)) { ?>
+                                                    <div class="err_message">
+                                                        <?php echo htmlspecialchars($err_subject); ?>
+                                                        <div class="err_close">×</div>
+                                                    </div>
+                                                <?php } ?>
 
-                                            <?php if(isset($err_message)) { ?>
-                                                <div class="err_message">
-                                                    <?php echo htmlspecialchars($err_message); ?>
-                                                    <div class="err_close">×</div>
-                                                </div>
-                                            <?php } ?>
+                                                <?php if(isset($err_message)) { ?>
+                                                    <div class="err_message">
+                                                        <?php echo htmlspecialchars($err_message); ?>
+                                                        <div class="err_close">×</div>
+                                                    </div>
+                                                <?php } ?>
 
-                                            <?php if(isset($success)) { ?>
-                                                <div class="err_message success">
-                                                    <?php echo htmlspecialchars($success); ?>
-                                                    <div class="err_close">×</div>
-                                                </div>
+                                                <?php if(isset($success)) { ?>
+                                                    <div class="err_message success">
+                                                        <?php echo htmlspecialchars($success); ?>
+                                                        <div class="err_close">×</div>
+                                                    </div>
+                                                <?php } ?>
                                             <?php } ?>
                                         </div>
                                         <div class="form-group">
                                             <div class="form-item">
                                                 <label for="name" class="required">Your Name</label>
-                                                <input id="name" type="text" class="form-control" name="name" value="<?php htmlspecialchars($name) ?>">
+                                                <input id="name" type="text" class="form-control" name="name" value="<?php echo htmlspecialchars($name) ?>">
                                             </div>
                                             <div class="form-item">
                                                 <label for="company">Company Name</label>
-                                                <input id="company" type="text" class="form-control" name="company" value="<?php htmlspecialchars($company) ?>">
+                                                <input id="company" type="text" class="form-control" name="company" value="<?php echo htmlspecialchars($company) ?>">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="form-item">
                                                 <label for="email" class="required">Your Email</label>
-                                                <input id="email" type="email" class="form-control" name="email" value="<?php htmlspecialchars($email) ?>" >
+                                                <input id="email" type="email" class="form-control" name="email" value="<?php echo htmlspecialchars($email) ?>" >
                                             </div>
                                             <div class="form-item">
                                                 <label for="number" class="required">Your Telephone Number</label>
-                                                <input id="number" type="text" class="form-control" name="number" value="<?php htmlspecialchars($number) ?>">
+                                                <input id="number" type="text" class="form-control" name="number" value="<?php echo htmlspecialchars($number) ?>">
                                             </div>
                                         </div>
                                         <div class="form-item">
                                             <label for="subject" class="required">Subject</label>
-                                            <input id="subject" type="text" class="form-control" name="subject" value="<?php htmlspecialchars($subject) ?>">
+                                            <input id="subject" type="text" class="form-control" name="subject" value="<?php echo htmlspecialchars($subject) ?>">
                                         </div>
                                         <div class="form-item">
                                             <label for="message" class="required">Message</label>
-                                            <textarea id="message" class="form-control" name="message" value="<?php htmlspecialchars($message) ?>"></textarea>
+                                            <textarea id="message" class="form-control" name="message"><?php echo htmlspecialchars($message) ?></textarea>
                                         </div>
                                         <div class="form-group">
                                             <label class="marketing-checkbox">
                                                 <span class="media">
                                                     <span class="media-checkbox">
                                                         <span class="checkbox-container">
-                                                            <input name="marketing-preference" class="checkbox" type="checkbox" value="1">
+                                                            <input name="marketing-preference" class="checkbox" type="checkbox" value="<?php echo htmlspecialchars($marketing) ?>">
                                                             <span class="checked">
                                                                 <i class="fa-solid fa-check checkmark"></i>
                                                             </span>

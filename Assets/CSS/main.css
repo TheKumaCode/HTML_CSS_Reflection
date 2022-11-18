@@ -1745,11 +1745,12 @@ a.linked-in:hover {
 .contact-page-form-section #contact-form .form-action p {
   font-size: 0.85rem;
 }
-.contact-page-form-section #contact-form .err_messages {
+
+.err_messages {
   display: flex;
   flex-direction: column;
 }
-.contact-page-form-section #contact-form .err_messages .err_message {
+.err_messages .err_message {
   width: 100%;
   padding: 15px;
   margin-bottom: 20px;
@@ -1757,12 +1758,12 @@ a.linked-in:hover {
   color: #a94442;
   background: #f2dede;
 }
-.contact-page-form-section #contact-form .err_messages .err_message.success {
+.err_messages .err_message.success {
   background-color: #2ecc71;
   border: 0;
   color: white;
 }
-.contact-page-form-section #contact-form .err_messages .err_message .err_close {
+.err_messages .err_message .err_close {
   float: right;
   font-size: 21px;
   opacity: 0.2;
@@ -1775,7 +1776,7 @@ a.linked-in:hover {
       -ms-user-select: none;
           user-select: none;
 }
-.contact-page-form-section #contact-form .err_messages .err_message .err_close:hover {
+.err_messages .err_message .err_close:hover {
   opacity: 0.5;
 }
 

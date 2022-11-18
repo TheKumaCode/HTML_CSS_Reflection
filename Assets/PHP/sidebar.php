@@ -161,7 +161,7 @@
     <a class="sidebar-content-title">Covid Risk Assessments</a>
     </li>
     <li class="sidebar-nav-category">
-    <a class="sidebar-content-title" href="./Pages/contact.php">Contact Us</a>
+    <a class="sidebar-content-title contact-btn" href="./Pages/contact.php">Contact Us</a>
     <ul class="sidebar-content-list">
         <li class="sidebar-content-item"><a href="#" ><i class="fa-solid fa-angles-right"></i>Cambridge Office</a></li>
         <li class="sidebar-content-item"><a href="#" ><i class="fa-solid fa-angles-right"></i>Wymondham Office</a></li>

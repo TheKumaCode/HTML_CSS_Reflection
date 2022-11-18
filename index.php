@@ -1,5 +1,6 @@
 <?php 
     include_once('./Assets/PHP/database.php');
+    include('./Assets/PHP/newsletter-form.php');
 ?>
 <!doctype html>
 <html lang="en">

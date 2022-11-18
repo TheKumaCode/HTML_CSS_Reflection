@@ -187,7 +187,7 @@
                     <i class="fa-solid fa-computer-mouse"></i>
                     Support 
                     </a>
-                    <a href="./Pages/contact.php" class="btn btn-norm btn-header">
+                    <a href="./Pages/contact.php" class="btn btn-norm btn-header contact-btn">
                     <i class="fa-regular fa-paper-plane"></i>
                     Contact 
                     </a>
