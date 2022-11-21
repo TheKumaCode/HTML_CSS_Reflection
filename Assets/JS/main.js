@@ -115,7 +115,6 @@ if (body.classList.contains('contact-page')) {
     var contactBtns = document.querySelectorAll('.contact-btn');
     const showTimes = document.querySelector('.opening-hours_open');
     const timesMenu = document.querySelector('.opening-hours_menu');
-    const close = document.querySelectorAll('.err_close');
 
     for (var i = 0; i < mainLogos.length; i ++) {
         mainLogos[i].src = "../Assets/Images/f-logo.png";
@@ -134,9 +133,11 @@ if (body.classList.contains('contact-page')) {
             timesMenu.classList.add('active');
         }
     })
-
-    close.forEach((e) => e.addEventListener('click', () => {
-        e.parentElement.remove();
-    }))
-
 }
+
+
+const close = document.querySelectorAll('.err_close');
+
+close.forEach((e) => e.addEventListener('click', () => {
+    e.parentElement.remove();
+}))
