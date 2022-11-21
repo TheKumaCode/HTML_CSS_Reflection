@@ -6,28 +6,28 @@
 
                     <?php if(isset($err_newsletterName)) { ?>
                         <div class="err_message">
-                            <?php echo htmlspecialchars($err_newsletterName); ?>
+                            <?php echo $err_newsletterName; ?>
                             <div class="err_close">×</div>
                         </div>
                     <?php } ?>
 
                     <?php if(isset($err_newsletterEmail)) { ?>
                         <div class="err_message">
-                            <?php echo htmlspecialchars($err_newsletterEmail); ?>
+                            <?php echo $err_newsletterEmail; ?>
                             <div class="err_close">×</div>
                         </div>
                     <?php } ?>
 
                     <?php if(isset($err_newsletterMarketing)) { ?>
                         <div class="err_message">
-                            <?php echo htmlspecialchars($err_newsletterMarketing); ?>
+                            <?php echo $err_newsletterMarketing; ?>
                             <div class="err_close">×</div>
                         </div>
                     <?php } ?>
 
                     <?php if(isset($newsletter_success)) { ?>
                         <div class="err_message success">
-                            <?php echo htmlspecialchars($newsletter_success); ?>
+                            <?php echo $newsletter_success; ?>
                             <div class="err_close">×</div>
                         </div>
                     <?php } ?>
@@ -38,13 +38,13 @@
                 <div class="sign-up-input">
                     <div class="form-group">
                         <label for="newsletter-name" class="required">Your Name</label>
-                        <input  type="text" class="form-control" id="newsletter-name" name="newsletter-name" value="<?php echo htmlspecialchars($newsletter_name) ?>">
+                        <input  type="text" class="form-control" id="newsletter-name" name="newsletter-name" value="<?php echo $newsletter_name ?>">
                     </div>
                 </div>
                 <div class="sign-up-input">
                     <div class="form-group">
                         <label for="newsletter-email" class="required">Your Email</label>
-                        <input  type="email" class="form-control" id="newsletter-email" name="newsletter-email" value="<?php echo htmlspecialchars($newsletter_email) ?>">
+                        <input  type="email" class="form-control" id="newsletter-email" name="newsletter-email" value="<?php echo $newsletter_email ?>">
                     </div>
                 </div>
             </div>

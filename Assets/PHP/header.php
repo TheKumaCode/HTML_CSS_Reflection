@@ -7,9 +7,9 @@
                 <div class="row">
                 <div class="h-r1">
                     <div class="logo-container">
-                    <div class="logo">
-                        <img src="./Assets/Images/f-logo.png" alt="Main Logo For NetMatters" class="main-logo-header">
-                    </div>
+                        <a class="logo" href="https://netmatters.robertas-vildziunas.netmatters-scs.co.uk/">
+                            <img src="./Assets/Images/f-logo.png" alt="Main Logo For NetMatters" class="main-logo-header">
+                        </a>
                     </div>
                 </div>
                 <div class="h-r1 mobile">
@@ -171,9 +171,9 @@
         <div class="row">
             <div class="h-r1">
                 <div class="logo-container">
-                    <div class="logo">
+                    <a class="logo" href="https://netmatters.robertas-vildziunas.netmatters-scs.co.uk/">
                         <img src="./Assets/Images/f-logo.png" alt="Main Logo For NetMatters" class="main-logo-header">
-                    </div>
+                    </a>
                 </div>
             </div>
             <div class="h-r1 mobile">

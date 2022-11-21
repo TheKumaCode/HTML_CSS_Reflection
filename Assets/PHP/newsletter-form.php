@@ -30,7 +30,7 @@
 
     if(isset($_POST['submit-newsletter']) && empty($err_newsletterName) && empty($err_newsletterEmail) && empty($err_newsletterMarketing)) {
         
-        $submit_newsletter = "INSERT INTO `newsletter`(`ID`, `Newsletter_Name`, `Newsletter_Email`) VALUES ('', '{$newsletter_name}', '{$newsletter_email}')";
+        $submit_newsletter = "INSERT INTO `newsletter`(`Newsletter_Name`, `Newsletter_Email`) VALUES ('{$newsletter_name}', '{$newsletter_email}')";
 
         $connect->query($submit_newsletter);
         
