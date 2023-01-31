@@ -8,6 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Netmatter Site Remake</title>
+    <link rel="shortcute icon" href="Assets/Images/Favico/favicon.ico">
     <link rel="stylesheet" href="Assets/CSS/main.css">
     <script src="https://kit.fontawesome.com/52d68163f3.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -305,7 +306,7 @@
                     <div class="row">
                       <?php
 
-                      $sql = "SELECT * FROM articles";
+                      $sql = "SELECT * FROM articles ORDER BY Article_Date DESC LIMIT 3";
                       $result = $connect->query($sql);
 
                       if ($connect->connect_error) {
@@ -336,7 +337,10 @@
                                   <div class="details">
                                     <strong class="primary-text">Posted by <?php echo $row['Article_AvatarAlt'] ?></strong>
                                     <br>
-                                    <?php echo $row['Article_Date'] ?>
+                                    <?php 
+                                    $date = $row['Article_Date'];
+                                    $dateFr = date("jS F Y", strtotime($date));
+                                    echo $dateFr; ?>
                                   </div>
                                 </div>
                               </div>

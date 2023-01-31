@@ -1678,6 +1678,9 @@ a.linked-in:hover {
   font-weight: 700;
   color: #926fb1;
 }
+.contact-page-form-section .contact-form_details p a.email:hover {
+  text-decoration: underline;
+}
 .contact-page-form-section .contact-form_opening-hours .opening-hours_open {
   font-weight: 600;
   color: black;
@@ -1688,10 +1691,12 @@ a.linked-in:hover {
 }
 .contact-page-form-section .contact-form_opening-hours .opening-hours_open:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 .contact-page-form-section .contact-form_opening-hours .opening-hours_menu {
   overflow: hidden;
-  height: 0px;
+  height: auto;
+  max-height: 0;
   transition: all 0.3s linear;
 }
 .contact-page-form-section .contact-form_opening-hours .opening-hours_menu p strong {
@@ -1702,7 +1707,7 @@ a.linked-in:hover {
   margin-top: 0;
 }
 .contact-page-form-section .contact-form_opening-hours .opening-hours_menu.active {
-  height: 100%;
+  max-height: 500px;
   transition: all 0.3s linear;
 }
 .contact-page-form-section #contact-form {
@@ -1725,6 +1730,9 @@ a.linked-in:hover {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
+}
+.contact-page-form-section #contact-form .form-item .form-control.error {
+  border: 1px solid red;
 }
 .contact-page-form-section #contact-form .form-item textarea {
   min-height: 100px;

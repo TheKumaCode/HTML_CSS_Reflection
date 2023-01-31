@@ -206,7 +206,7 @@
                                     <div class="contact-form_details">
                                         <p><strong>Email us on:</strong></p>
                                         <p>
-                                            <a href="#" class="email">sales@netmatters.com</a>
+                                            <a href="mailto: sales@netmatters.com" class="email">sales@netmatters.com</a>
                                         </p>
                                         <p><strong>Business Hours:</strong></p>
                                         <p><strong>Monday - Friday 07:00 - 18:00</strong></p>
@@ -225,7 +225,7 @@
                                     </div>
                                 </div>
                                 <div class="contact-page-form-section form-two">
-                                    <form action="./contact.php#contact-form" method="POST" accept-charset="UTF-8" id="contact-form" novalidate>
+                                    <form action="./contact.php#contact-form" method="POST" accept-charset="UTF-8" id="contact-form" name="contact-form" novalidate>
                                         <div class="err_messages">
                                             <?php if (isset($_POST['submit'])){ ?>
                                                 <?php if(isset($err_name)) { ?>
@@ -318,7 +318,7 @@
                                             </label>
                                         </div>
                                         <div class="form-action">
-                                            <button name="submit" class="btn submit-btn">Send Enquiry</button>
+                                            <button name="submit" class="btn submit-btn" id="con-sub-btn">Send Enquiry</button>
                                             <p><strong class="required"></strong> Fields Required</p>
                                         </div>
                                     </form>
