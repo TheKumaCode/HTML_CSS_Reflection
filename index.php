@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Netmatter Site Remake</title>
-    <link rel="shortcute icon" href="Assets/Images/Favico/favicon.ico">
+    <link rel="shortcut icon" href="Assets/Images/Favico/favicon.ico">
     <link rel="stylesheet" href="Assets/CSS/main.css">
     <script src="https://kit.fontawesome.com/52d68163f3.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
